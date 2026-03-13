@@ -1,0 +1,928 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Mind-of-Director: Film Previsualization via Multi-Modal Agents</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: 'Georgia', serif;
+            background: linear-gradient(135deg, #0a0a0a 0%, #1a1a2e 30%, #16213e 60%, #0f3460 100%);
+            color: #ffffff;
+            line-height: 1.6;
+            overflow-x: hidden;
+        }
+
+        .bg-animation {
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            z-index: -1;
+            overflow: hidden;
+        }
+
+        .film-strip {
+            position: absolute;
+            height: 20px;
+            background: repeating-linear-gradient(
+                90deg,
+                transparent,
+                transparent 8px,
+                rgba(255, 215, 0, 0.15) 8px,
+                rgba(255, 215, 0, 0.15) 16px
+            );
+            border-top: 2px solid rgba(255, 215, 0, 0.1);
+            border-bottom: 2px solid rgba(255, 215, 0, 0.1);
+        }
+
+        .film-strip:nth-child(1) { 
+            width: 250px; 
+            top: 8%; 
+            left: -250px; 
+            animation: filmMoveRight 25s linear infinite;
+        }
+        .film-strip:nth-child(2) { 
+            width: 200px; 
+            top: 25%; 
+            right: -200px; 
+            animation: filmMoveLeft 20s linear infinite;
+            animation-delay: -5s;
+        }
+        .film-strip:nth-child(3) { 
+            width: 300px; 
+            top: 45%; 
+            left: -300px; 
+            animation: filmMoveRight 30s linear infinite;
+            animation-delay: -10s;
+        }
+        .film-strip:nth-child(4) { 
+            width: 180px; 
+            top: 65%; 
+            right: -180px; 
+            animation: filmMoveLeft 22s linear infinite;
+            animation-delay: -15s;
+        }
+        .film-strip:nth-child(5) { 
+            width: 220px; 
+            top: 85%; 
+            left: -220px; 
+            animation: filmMoveRight 18s linear infinite;
+            animation-delay: -8s;
+        }
+
+        @keyframes filmMoveRight {
+            0% { transform: translateX(0); }
+            100% { transform: translateX(calc(100vw + 300px)); }
+        }
+
+        @keyframes filmMoveLeft {
+            0% { transform: translateX(0); }
+            100% { transform: translateX(calc(-100vw - 300px)); }
+        }
+
+        .spotlight {
+            position: absolute;
+            border-radius: 50%;
+            animation: spotlight 12s ease-in-out infinite;
+        }
+
+        .spotlight:nth-child(6) { 
+            width: 400px; 
+            height: 400px;
+            top: 15%; 
+            right: 5%;
+            background: radial-gradient(circle, rgba(255, 215, 0, 0.08) 0%, transparent 70%);
+        }
+        .spotlight:nth-child(7) { 
+            width: 350px; 
+            height: 350px;
+            bottom: 20%; 
+            left: 10%; 
+            background: radial-gradient(circle, rgba(255, 255, 255, 0.04) 0%, transparent 70%);
+            animation-delay: -4s;
+        }
+        .spotlight:nth-child(8) { 
+            width: 280px; 
+            height: 280px;
+            top: 50%; 
+            right: 25%; 
+            background: radial-gradient(circle, rgba(255, 215, 0, 0.06) 0%, transparent 70%);
+            animation-delay: -8s;
+        }
+
+        @keyframes spotlight {
+            0%, 100% { opacity: 0.4; transform: scale(1) rotate(0deg); }
+            25% { opacity: 0.7; transform: scale(1.1) rotate(90deg); }
+            50% { opacity: 0.5; transform: scale(1.3) rotate(180deg); }
+            75% { opacity: 0.8; transform: scale(0.9) rotate(270deg); }
+        }
+
+        .cinema-element {
+            position: absolute;
+            opacity: 0.1;
+            animation: float 15s ease-in-out infinite;
+        }
+
+        .cinema-element:nth-child(9) {
+            top: 20%;
+            left: 5%;
+            font-size: 3rem;
+            animation-delay: -2s;
+        }
+        .cinema-element:nth-child(10) {
+            top: 60%;
+            right: 8%;
+            font-size: 2.5rem;
+            animation-delay: -6s;
+        }
+        .cinema-element:nth-child(11) {
+            bottom: 30%;
+            left: 15%;
+            font-size: 2rem;
+            animation-delay: -10s;
+        }
+        .cinema-element:nth-child(12) {
+            top: 35%;
+            left: 80%;
+            font-size: 1.8rem;
+            animation-delay: -14s;
+        }
+
+        @keyframes float {
+            0%, 100% { transform: translateY(0px) rotate(0deg); opacity: 0.1; }
+            25% { transform: translateY(-20px) rotate(5deg); opacity: 0.15; }
+            50% { transform: translateY(-10px) rotate(-3deg); opacity: 0.08; }
+            75% { transform: translateY(-25px) rotate(7deg); opacity: 0.12; }
+        }
+
+        .light-ray {
+            position: absolute;
+            width: 2px;
+            height: 150px;
+            background: linear-gradient(to bottom, 
+                transparent, 
+                rgba(255, 215, 0, 0.3), 
+                rgba(255, 215, 0, 0.1), 
+                transparent
+            );
+            animation: lightRay 8s ease-in-out infinite;
+        }
+
+        .light-ray:nth-child(13) { top: 10%; left: 20%; animation-delay: -1s; }
+        .light-ray:nth-child(14) { top: 30%; right: 30%; animation-delay: -3s; }
+        .light-ray:nth-child(15) { bottom: 20%; left: 60%; animation-delay: -5s; }
+        .light-ray:nth-child(16) { top: 70%; right: 15%; animation-delay: -7s; }
+
+        @keyframes lightRay {
+            0%, 100% { opacity: 0; transform: scaleY(0.5); }
+            50% { opacity: 1; transform: scaleY(1.2); }
+        }
+
+        .particle {
+            position: absolute;
+            width: 3px;
+            height: 3px;
+            background: rgba(255, 215, 0, 0.6);
+            border-radius: 50%;
+            animation: particle 20s linear infinite;
+        }
+
+        .particle:nth-child(17) { top: 15%; left: 10%; animation-delay: -2s; }
+        .particle:nth-child(18) { top: 40%; left: 30%; animation-delay: -6s; }
+        .particle:nth-child(19) { top: 65%; left: 70%; animation-delay: -10s; }
+        .particle:nth-child(20) { top: 80%; left: 20%; animation-delay: -14s; }
+        .particle:nth-child(21) { top: 25%; right: 25%; animation-delay: -18s; }
+
+        @keyframes particle {
+            0% { transform: translateY(100vh) scale(0); opacity: 0; }
+            10% { opacity: 1; }
+            90% { opacity: 1; }
+            100% { transform: translateY(-100px) scale(1); opacity: 0; }
+        }
+
+        .lens-flare {
+            position: absolute;
+            width: 100px;
+            height: 100px;
+            background: radial-gradient(circle, 
+                rgba(255, 215, 0, 0.3) 0%, 
+                rgba(255, 215, 0, 0.1) 30%, 
+                transparent 70%
+            );
+            border-radius: 50%;
+            top: 25%;
+            right: 20%;
+            animation: lensFlare 10s ease-in-out infinite;
+        }
+
+        @keyframes lensFlare {
+            0%, 100% { opacity: 0; transform: scale(0.5); }
+            50% { opacity: 1; transform: scale(1.5); }
+        }
+
+        .container {
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 0 20px;
+            position: relative;
+            z-index: 1;
+        }
+
+        .header {
+            text-align: center;
+            padding: 80px 0 60px;
+            position: relative;
+        }
+
+        .title {
+            font-size: 2.3rem;
+            font-weight: bold;
+            margin-bottom: 20px;
+            background: linear-gradient(45deg, #ffd700, #ffed4e, #ffa500, #ffd700);
+            background-size: 300% 300%;
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+            background-clip: text;
+            text-shadow: 0 0 30px rgba(255, 215, 0, 0.3);
+            line-height: 1.2;
+            animation: titleGlow 4s ease-in-out infinite;
+        }
+
+        @keyframes titleGlow {
+            0%, 100% { background-position: 0% 50%; }
+            50% { background-position: 100% 50%; }
+        }
+
+        .conference-info {
+            font-size: 1.2rem;
+            color: #b8b8b8;
+            margin-bottom: 30px;
+            line-height: 1.4;
+        }
+
+        .navigation-buttons {
+            display: flex;
+            justify-content: center;
+            gap: 20px;
+            margin-bottom: 0;
+            flex-wrap: wrap;
+        }
+
+        .nav-button {
+            display: inline-flex;
+            align-items: center;
+            gap: 8px;
+            padding: 12px 20px;
+            background: rgba(255, 215, 0, 0.1);
+            border: 2px solid rgba(255, 215, 0, 0.3);
+            border-radius: 25px;
+            color: #ffd700;
+            text-decoration: none;
+            font-size: 1rem;
+            font-weight: bold;
+            transition: all 0.3s ease;
+            backdrop-filter: blur(10px);
+        }
+
+        .nav-button:hover {
+            background: rgba(255, 215, 0, 0.2);
+            border-color: #ffd700;
+            transform: translateY(-2px);
+            box-shadow: 0 5px 15px rgba(255, 215, 0, 0.2);
+        }
+
+        .nav-button-icon {
+            width: 20px;
+            height: 20px;
+            object-fit: contain;
+        }
+
+        /* Teaser image */
+        .teaser-section {
+            margin: 15px 0;
+            text-align: center;
+        }
+
+        .teaser-container {
+            background: rgba(255, 255, 255, 0.05);
+            border-radius: 20px;
+            padding: 30px;
+            backdrop-filter: blur(15px);
+            border: 1px solid rgba(255, 215, 0, 0.2);
+            box-shadow: 0 20px 40px rgba(0, 0, 0, 0.4), 
+                        inset 0 1px 0 rgba(255, 255, 255, 0.1);
+        }
+
+        .teaser-image {
+            width: 100%;
+            height: auto;
+            border-radius: 15px;
+            box-shadow: 0 10px 30px rgba(0, 0, 0, 0.3);
+            display: block;
+        }
+
+        .image-caption {
+            margin-top: 25px;
+            font-size: 1.1rem;
+            line-height: 1.8;
+            color: #d4d4d4;
+            text-align: justify;
+            padding: 0 20px;
+            text-justify: inter-word;
+            hyphens: auto;
+            -webkit-hyphens: auto;
+            -ms-hyphens: auto;
+        }
+
+        /* Abstract */
+        .abstract-section {
+            margin: 80px 0;
+        }
+
+        .section-title {
+            font-size: 2.5rem;
+            text-align: center;
+            margin-bottom: 40px;
+            color: #ffd700;
+            position: relative;
+            text-shadow: 0 0 20px rgba(255, 215, 0, 0.3);
+        }
+
+        .section-title::after {
+            content: '';
+            position: absolute;
+            bottom: -10px;
+            left: 50%;
+            transform: translateX(-50%);
+            width: 100px;
+            height: 3px;
+            background: linear-gradient(90deg, transparent, #ffd700, transparent);
+            animation: underlineGlow 3s ease-in-out infinite;
+        }
+
+        @keyframes underlineGlow {
+            0%, 100% { box-shadow: 0 0 5px rgba(255, 215, 0, 0.3); }
+            50% { box-shadow: 0 0 20px rgba(255, 215, 0, 0.6); }
+        }
+
+        .abstract-content {
+            background: rgba(255, 255, 255, 0.03);
+            padding: 40px;
+            border-radius: 20px;
+            font-size: 1.1rem;
+            font-style: italic;
+            line-height: 1.8;
+            border-left: 4px solid #ffd700;
+            backdrop-filter: blur(10px);
+            box-shadow: inset 0 1px 0 rgba(255, 255, 255, 0.1);
+            text-align: justify;
+            text-justify: inter-word;
+            hyphens: auto;
+            -webkit-hyphens: auto;
+            -ms-hyphens: auto;
+        }
+
+        /* Video demo section */
+        .video-demo-section {
+            margin: 80px 0;
+        }
+
+        .video-carousel {
+            position: relative;
+            background: rgba(0, 0, 0, 0.3);
+            border-radius: 20px;
+            padding: 40px;
+            backdrop-filter: blur(15px);
+            border: 1px solid rgba(255, 215, 0, 0.1);
+            box-shadow: 0 20px 40px rgba(0, 0, 0, 0.3);
+        }
+
+        .carousel-container {
+            position: relative;
+            max-width: 800px;
+            margin: 0 auto;
+        }
+
+        .video-slide {
+            display: none;
+            text-align: center;
+        }
+
+        .video-slide.active {
+            display: block;
+        }
+
+        .demo-video {
+            width: 100%;
+            max-width: 800px;
+            height: 450px;
+            border-radius: 15px;
+            box-shadow: 0 10px 30px rgba(0, 0, 0, 0.5);
+        }
+
+        .video-caption {
+            margin-top: 20px;
+            font-size: 1.2rem;
+            color: #d4d4d4;
+            font-style: italic;
+        }
+
+        .carousel-nav {
+            position: absolute;
+            top: 50%;
+            transform: translateY(-50%);
+            background: rgba(255, 215, 0, 0.2);
+            border: 2px solid #ffd700;
+            border-radius: 50%;
+            width: 60px;
+            height: 60px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            cursor: pointer;
+            font-size: 1.5rem;
+            color: #ffd700;
+            transition: all 0.3s ease;
+            backdrop-filter: blur(10px);
+        }
+
+        .carousel-nav:hover {
+            background: rgba(255, 215, 0, 0.4);
+            transform: translateY(-50%) scale(1.1);
+            box-shadow: 0 0 20px rgba(255, 215, 0, 0.5);
+        }
+
+        .carousel-prev {
+            left: -80px;
+        }
+
+        .carousel-next {
+            right: -80px;
+        }
+
+        .carousel-dots {
+            display: flex;
+            justify-content: center;
+            gap: 15px;
+            margin-top: 30px;
+        }
+
+        .dot {
+            width: 12px;
+            height: 12px;
+            border-radius: 50%;
+            background: rgba(255, 215, 0, 0.3);
+            cursor: pointer;
+            transition: all 0.3s ease;
+        }
+
+        .dot.active {
+            background: #ffd700;
+            transform: scale(1.2);
+            box-shadow: 0 0 10px rgba(255, 215, 0, 0.5);
+        }
+
+        /* Method section */
+        .method-section {
+            margin: 80px 0;
+        }
+
+        .method-container {
+            background: rgba(255, 255, 255, 0.05);
+            border-radius: 20px;
+            padding: 30px;
+            backdrop-filter: blur(15px);
+            border: 1px solid rgba(255, 215, 0, 0.2);
+            box-shadow: 0 20px 40px rgba(0, 0, 0, 0.3);
+        }
+
+        .method-image {
+            width: 100%;
+            height: auto;
+            border-radius: 15px;
+            box-shadow: 0 10px 30px rgba(0, 0, 0, 0.3);
+            display: block;
+        }
+
+        /* Discussion section */
+        .discussion-section {
+            margin: 40px 0 60px;  /* 将 margin-top 和 margin-bottom 都调小，减少间距 */
+        }
+
+        .discussion-content {
+            background: rgba(255, 255, 255, 0.03);
+            padding: 30px;  /* 将内边距稍微减小，减少内容区的高度 */
+            border-radius: 20px;
+            font-size: 1.1rem;
+            line-height: 1.8;
+            border-left: 4px solid #ffd700;
+            backdrop-filter: blur(10px);
+            box-shadow: inset 0 1px 0 rgba(255, 255, 255, 0.1);
+            text-align: justify;
+            text-justify: inter-word;
+            hyphens: auto;
+            -webkit-hyphens: auto;
+            -ms-hyphens: auto;
+        }
+
+        /* Conclusion section (If you want to apply the same spacing adjustments) */
+        .conclusion-section {
+            margin: 40px 0 60px;  /* Adjusting the margin for the conclusion section */
+        }
+
+        .conclusion-content {
+            background: rgba(255, 255, 255, 0.03);
+            padding: 30px;
+            border-radius: 20px;
+            font-size: 1.1rem;
+            line-height: 1.8;
+            border-left: 4px solid #ffd700;
+            backdrop-filter: blur(10px);
+            box-shadow: inset 0 1px 0 rgba(255, 255, 255, 0.1);
+            text-align: justify;
+            text-justify: inter-word;
+            hyphens: auto;
+            -webkit-hyphens: auto;
+            -ms-hyphens: auto;
+        }
+
+        /* Placeholder page styles */
+        .placeholder-page {
+            display: none;
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background: linear-gradient(135deg, #0a0a0a 0%, #1a1a2e 30%, #16213e 60%, #0f3460 100%);
+            z-index: 1000;
+            justify-content: center;
+            align-items: center;
+            flex-direction: column;
+        }
+
+        .placeholder-content {
+            text-align: center;
+            color: #ffffff;
+        }
+
+        .placeholder-content h1 {
+            font-size: 3rem;
+            color: #ffd700;
+            margin-bottom: 20px;
+        }
+
+        .placeholder-content p {
+            font-size: 1.2rem;
+            margin-bottom: 40px;
+            color: #b8b8b8;
+        }
+
+        .return-button {
+            padding: 15px 30px;
+            background: rgba(255, 215, 0, 0.2);
+            border: 2px solid #ffd700;
+            border-radius: 30px;
+            color: #ffd700;
+            font-size: 1.1rem;
+            font-weight: bold;
+            cursor: pointer;
+            transition: all 0.3s ease;
+            backdrop-filter: blur(10px);
+        }
+
+        .return-button:hover {
+            background: rgba(255, 215, 0, 0.3);
+            transform: translateY(-2px);
+            box-shadow: 0 5px 15px rgba(255, 215, 0, 0.3);
+        }
+
+        @media (max-width: 768px) {
+            .title {
+                font-size: 2.5rem;
+            }
+            
+            .navigation-buttons {
+                gap: 10px;
+            }
+            
+            .nav-button {
+                padding: 10px 15px;
+                font-size: 0.9rem;
+            }
+            
+            .carousel-prev {
+                left: -40px;
+            }
+            
+            .carousel-next {
+                right: -40px;
+            }
+            
+            .carousel-nav {
+                width: 50px;
+                height: 50px;
+                font-size: 1.2rem;
+            }
+            
+            .abstract-content,
+            .discussion-content {
+                padding: 25px;
+            }
+        }
+
+        html {
+            scroll-behavior: smooth;
+        }
+
+        .fade-in {
+            opacity: 0;
+            transform: translateY(30px);
+            transition: all 0.8s ease;
+        }
+
+        .fade-in.visible {
+            opacity: 1;
+            transform: translateY(0);
+        }
+    </style>
+</head>
+<body>
+
+    <!-- Main Project Page -->
+    <div class="container" id="main-page">
+        <!-- Header -->
+        <header class="header fade-in">
+            <h1 class="title">Mind-of-Director: Multi-modal Agent-Driven Film Previsualization via Collaborative Decision-Making</h1>
+            <div class="conference-info">
+                Anonymous CVPR submission<br>
+            </div>
+            <div class="navigation-buttons">
+                <a href="#" class="nav-button" onclick="showPlaceholder('Paper')">
+                    <span class="nav-button-icon">📄</span>
+                    Paper
+                </a>
+                <a href="#" class="nav-button" onclick="showPlaceholder('ArXiv')">
+                    <img src="images/icons/arxiv.png" class="nav-button-icon" alt="ArXiv">
+                    ArXiv
+                </a>
+                <a href="#" class="nav-button" onclick="showPlaceholder('GitHub')">
+                    <img src="images/icons/github.png" class="nav-button-icon" alt="GitHub">
+                    GitHub
+                </a>
+                <a href="#" class="nav-button" onclick="showPlaceholder('Data')">
+                    <img src="images/icons/data.png" class="nav-button-icon" alt="Data">
+                    Data
+                </a>
+                <a href="#" class="nav-button" onclick="showPlaceholder('HuggingFace')">
+                    <span class="nav-button-icon">🤗</span>
+                    HuggingFace
+                </a>
+            </div>
+        </header>
+        
+
+        <!-- Teaser Image -->
+        <section class="teaser-section fade-in">
+            <div class="teaser-container">
+                <img src="images/teaser.png" class="teaser-image" alt="Teaser Image" onerror="this.onerror=null; this.src='images/teaser.jpg';">
+                    <div class="image-caption">
+                        <strong>Traditional Previz vs. Mind-of-Director Framework.</strong> <em>Traditional Previz</em> requires iterative collaboration across multiple departments (where N denotes iterations, typically N ≫ 1), involving script writing, 2D storyboarding, 3D scene construction, character blocking, animatic production, and camera planning. In contrast, <em>Mind-of-Director</em> automates this pipeline (N = 1) through multi-modal agents that collaborate in real-time decision-making to generate high-quality, semantically aligned, and visually coherent previz sequences directly from an idea, enabling a single creator to prototype cinematic scenes with minimal manual effort in the game engine.
+                    </div>
+            </div>
+        </section>
+
+        <!-- Abstract -->
+        <section class="abstract-section fade-in">
+            <h2 class="section-title">Abstract</h2>
+            <div class="abstract-content">
+                We present <strong>Mind-of-Director</strong>, a multi-modal, agent-driven framework for film previsualization (previz) that models the collaborative decision-making process of a film production team. 
+                Given a high-level creative idea, <strong>Mind-of-Director</strong> orchestrates multiple specialized agents to collectively produce coherent film previz sequences within the game engine.
+                The framework consists of four cooperative modules:
+                <em>Script Development</em>, where agents draft and refine the screenplay through iterative dialogue;
+                <em>Virtual Scene Design</em>, which transforms text into semantically aligned 3D environments;
+                <em>Character Behaviour Control</em>, which determines character blocking and motion based on narrative intent;
+                and <em>Camera Planning</em>, which optimizes framing, movement, and composition for cinematic camera effects.
+                A real-time visual editing system built in the game engine further enables interactive inspection and synchronized timeline adjustment across scenes, behaviours, and cameras.
+                Extensive experiments and human evaluations show that <strong>Mind-of-Director</strong> generates high-quality, semantically grounded film previz sequences in approximately 25 minutes per idea, demonstrating the effectiveness of agent collaboration for both automated prototyping and human-in-the-loop filmmaking.
+            </div>
+        </section>
+
+                        <!-- Video Demo -->
+        <section class="video-demo-section fade-in">
+            <h2 class="section-title">Video Demonstrations</h2>
+            <div class="video-carousel">
+                <div class="carousel-container">
+                    
+                    <!-- Slide 1 -->
+                    <div class="video-slide active">
+                        <video class="demo-video" controls>
+                            <source src="videos/demo_1.mp4" type="video/mp4">
+                        </video>
+                        <div class="video-caption">
+                            The previz sequences of the original screenplay <em>The Last Supper</em>.
+                        </div>
+                    </div>
+
+                    <!-- Slide 2 -->
+                    <div class="video-slide">
+                        <video class="demo-video" controls>
+                            <source src="videos/demo_2.mp4" type="video/mp4">
+                        </video>
+                            <div class="video-caption">
+                                The previz sequences of the movie <em>The Social Network</em> directed by <em>David Fincher</em> in 2010.
+                                <br>
+                                The original film clip is used only as a reference and has been temporally aligned; it has no direct correspondence with the previz sequence.
+                            </div>
+                    </div>
+
+                    <!-- Slide 3 -->
+                    <div class="video-slide">
+                        <video class="demo-video" controls>
+                            <source src="videos/demo_3.mp4" type="video/mp4">
+                        </video>
+                        <div class="video-caption">
+                            The previz sequences of the movie <em>Good Will Hunting</em> directed by <em>Gus Van Sant</em> in 1997.
+                            <br>
+                            The original film clip is used only as a reference and has been temporally aligned; it has no direct correspondence with the previz sequence.
+                        </div>
+                    </div>
+
+                    <!-- Navigation -->
+                    <button class="carousel-nav carousel-prev" onclick="changeSlide(-1)">‹</button>
+                    <button class="carousel-nav carousel-next" onclick="changeSlide(1)">›</button>
+                </div>
+
+                <!-- Dots -->
+                <div class="carousel-dots">
+                    <span class="dot active" onclick="currentSlide(1)"></span>
+                    <span class="dot" onclick="currentSlide(2)"></span>
+                    <span class="dot" onclick="currentSlide(3)"></span>
+                </div>
+            </div>
+        </section>
+
+        <!-- Method Pipeline -->
+        <section class="method-section fade-in">
+            <h2 class="section-title">Method Pipeline</h2>
+            <div class="method-container">
+                <img src="images/method.png" class="method-image" alt="Method Pipeline" onerror="this.onerror=null; this.src='images/method.jpg';">
+                <div class="image-caption">
+                    <strong>Overview of the Mind-of-Director Framework.</strong>
+                    Given a high-level idea, our multi-modal agent-driven framework simulates a collaborative decision-making workflow through four modules:
+                    (1) <em>Script Development</em> refines the screenplay via a <em>Discuss–Revise–Judge</em> process;
+                    (2) <em>Virtual Scene Design</em> builds consistent 3D environments using 2D-guided and rule-based generation;
+                    (3) <em>Character Behaviour Control</em> optimizes character blocking and motion through agent feedback;
+                    (4) <em>Camera Planning</em> selects and validates cinematic shots via a <em>Debate–Judge–Validation</em> loop.
+                    All modules are integrated in Unity for real-time visualization and iterative refinement.
+                </div>
+            </div>
+        </section>
+
+        <!-- Discussion -->
+        <section class="discussion-section fade-in">
+            <h2 class="section-title">Discussion</h2>
+            <div class="discussion-content">
+                The great performance highlights the value of collaborative decision-making among multi-modal agents. Rather than relying on isolated model outputs, our system mirrors the distributed cognition of a real film crew, where creativity emerges through negotiation, critique, and consensus.
+                Beyond numerical improvements, this work redefines how AI participates in creative workflows: <strong>Mind-of-Director</strong> moves AI from a passive generator to an active collaborator capable of multi-role reasoning across narrative, spatial, and cinematic domains. This demonstrates that creative intelligence can arise from structured inter-agent dialogue, suggesting broader implications for computational creativity.
+                Moreover, the framework can naturally generalize to adjacent domains including interactive storytelling, game design, and AR/VR prototyping. By grounding AI-driven creativity in collaborative reasoning, the system bridges automation with artistic control and expands the design space for rapid content creation.
+                Nevertheless, the current system handles only moderately complex scenes with limited characters, and its narratives remain primarily human-centric. Future work will explore richer environments, multi-character interactions, and adaptive learning with real-time engine feedback, paving the way for fully autonomous and scalable creative systems.
+            </div>
+        </section>
+
+        <!-- Conclusion -->
+        <section class="conclusion-section fade-in">
+            <h2 class="section-title">Conclusion</h2>
+            <div class="discussion-content">
+                We present <strong>Mind-of-Director</strong>, a multi-modal agent-driven framework that automates film previz through collaborative decision-making. Inspired by real-world film crews, the framework consists of four stages: <em>Script Development</em>, <em>Virtual Scene Design</em>, <em>Character Behaviour Control</em>, and <em>Camera Planning</em>. 
+                By integrating these stages, Mind-of-Director effectively transforms a high-level creative idea into an editable film previz sequence, offering valuable insights and references for the creative process.
+            </div>
+        </section>
+    </div>
+
+    <!-- Placeholder Pages -->
+    <div class="placeholder-page" id="placeholder-page">
+        <div class="placeholder-content">
+            <h1 id="placeholder-title">Coming Soon</h1>
+            <p id="placeholder-description">This section will be available soon.</p>
+            <button class="return-button" onclick="returnToMain()">Return to Project Page</button>
+        </div>
+    </div>
+
+    <script>
+        let currentSlideIndex = 0;
+        const slides = document.querySelectorAll('.video-slide');
+        const dots = document.querySelectorAll('.dot');
+
+        function showSlide(index) {
+            slides.forEach(slide => slide.classList.remove('active'));
+            dots.forEach(dot => dot.classList.remove('active'));
+            
+            slides[index].classList.add('active');
+            dots[index].classList.add('active');
+            
+            slides.forEach(slide => {
+                const video = slide.querySelector('video');
+                if (video) video.pause();
+            });
+        }
+
+        function changeSlide(direction) {
+            currentSlideIndex += direction;
+            if (currentSlideIndex >= slides.length) currentSlideIndex = 0;
+            if (currentSlideIndex < 0) currentSlideIndex = slides.length - 1;
+            showSlide(currentSlideIndex);
+        }
+
+        function currentSlide(index) {
+            currentSlideIndex = index - 1;
+            showSlide(currentSlideIndex);
+        }
+
+        function showPlaceholder(type) {
+            const mainPage = document.getElementById('main-page');
+            const placeholderPage = document.getElementById('placeholder-page');
+            const title = document.getElementById('placeholder-title');
+            const description = document.getElementById('placeholder-description');
+
+            const content = {
+                'Paper': {
+                    title: 'Paper',
+                    description: 'The full paper will be available after publication.'
+                },
+                'ArXiv': {
+                    title: 'ArXiv',
+                    description: 'The ArXiv preprint will be available soon.'
+                },
+                'GitHub': {
+                    title: 'GitHub Repository',
+                    description: 'Source code and implementation details will be released upon acceptance.'
+                },
+                'Data': {
+                    title: 'Dataset',
+                    description: 'The dataset and experimental data will be made available.'
+                },
+                'HuggingFace': {
+                    title: 'HuggingFace',
+                    description: 'Models and demos will be hosted on HuggingFace.'
+                }
+            };
+
+            title.textContent = content[type].title;
+            description.textContent = content[type].description;
+            
+            mainPage.style.display = 'none';
+            placeholderPage.style.display = 'flex';
+        }
+
+        function returnToMain() {
+            const mainPage = document.getElementById('main-page');
+            const placeholderPage = document.getElementById('placeholder-page');
+            
+            placeholderPage.style.display = 'none';
+            mainPage.style.display = 'block';
+        }
+
+        const observerOptions = {
+            threshold: 0.1,
+            rootMargin: '0px 0px -50px 0px'
+        };
+
+        const observer = new IntersectionObserver(function(entries) {
+            entries.forEach(entry => {
+                if (entry.isIntersecting) {
+                    entry.target.classList.add('visible');
+                }
+            });
+        }, observerOptions);
+
+        document.querySelectorAll('.fade-in').forEach(el => {
+            observer.observe(el);
+        });
+
+        document.addEventListener('keydown', function(e) {
+            if (e.key === 'ArrowLeft') changeSlide(-1);
+            if (e.key === 'ArrowRight') changeSlide(1);
+        });
+
+        // Handle browser back button
+        window.addEventListener('popstate', function(e) {
+            returnToMain();
+        });
+
+        // Add history state when showing placeholder
+        function showPlaceholder(type) {
+            history.pushState({page: type}, '', '#' + type.toLowerCase());
+            // ... rest of showPlaceholder function
+        }
+    </script>
+</body>
+</html>
