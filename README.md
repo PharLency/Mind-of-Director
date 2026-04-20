@@ -116,6 +116,4 @@ python -m src.pipeline.pipeline_stage_4 \
 
 ## Notes
 
-Generated files under `log/` are ignored by Git. Keep only reproducible code, prompts, sample inputs, and lightweight examples in the repository.
-
-Holodeck is included under `third_party/holodeck` with its original license. The dataset must be downloaded separately.
+We thank the Holodeck project for providing the scene generation codebase that our Stage2 module builds upon.
