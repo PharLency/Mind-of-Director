@@ -1,0 +1,29 @@
+{
+  "reviewer": "Cinematographer_B",
+  "target_plan_author": "Cinematographer_A",
+  "agreements": [
+    "clip_01: two_static between Clara and Maya is valid—both static, relation 'distant' matches subtext, and framing respects blocking geometry.",
+    "clip_03: singlestatic CU on Elias is appropriate—static state, speaker role, and emotional motivation align with SECTION V.",
+    "clip_05: singlestatic CU on Elias correctly isolates his announcement while adhering to static state constraints.",
+    "clip_06: singlestatic CU on Maya effectively captures her realization and complies with static state and shot continuity."
+  ],
+  "disagreements": [
+    "clip_02: singlestatic CU on Maya is technically compliant but misses opportunity to reflect her shifting attention per blocking (she turns from Clara to Elias during clip_03 setup); current shot implies fixed frontality inconsistent with end_face_to in clip_02.",
+    "clip_04: two_static framing Clara and Maya ignores that Maya’s end_face_to is Clara, but Clara’s end_face_to is Maya—yet Elias has just spoken and remains central to the emerging tension; excluding him visually weakens foreshadowing."
+  ],
+  "suggestions": [
+    {
+      "clip_id": "clip_02",
+      "shot_index": 0,
+      "change": "Replace singlestatic with singlestatic but adjust direction to 'front-right' (azimuth ≈ +30°) to match Maya’s end orientation toward Elias per blocking in clip_02 (end_face_to: 'Clara' is incorrect—blocking shows end_face_to: 'Clara' in clip_02, but clip_03 shows immediate shift; however, clip_02 end_face_to is indeed 'Clara', so direction should remain front. Re-evaluate: no violation. Withdraw suggestion.",
+      "reason": "Upon rechecking blocking: clip_02 Maya end_face_to = 'Clara', so front-facing CU is geometrically valid. No violation."
+    },
+    {
+      "clip_id": "clip_04",
+      "shot_index": 0,
+      "change": "Replace two_static (Clara/Maya) with full_shot including all three characters",
+      "reason": "All characters are static, but the dialogue introduces house-related stakes implicating Elias (who remains seated but is psychologically central). SECTION V GROUP constraint: 'If multiple characters (≥3): Always prefer full_shot' applies when ensemble dynamics are narratively active—even if one is non-speaking. The parents’ joint revelation creates a triadic tension that two_static omits, violating spatial truth and foreshadowing intent."
+    }
+  ],
+  "summary": "Plan largely adheres to SECTION V constraints with valid static-state choices. Primary issue: clip_04’s two_static excludes Elias during a pivotal joint parental disclosure, weakening spatial and emotional triangulation. Replace with full_shot to honor ensemble context per GROUP constraints and script’s foreshadowing goal."
+}

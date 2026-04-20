@@ -1,0 +1,29 @@
+{
+  "reviewer": "Cinematographer_A",
+  "target_plan_author": "Cinematographer_B",
+  "agreements": [
+    "clip_01: two_static on Clara/Maya is valid—both static, relation 'distant' matches emotional tone.",
+    "clip_03: two_static (OTS_pair) on Elias/Maya adheres to constraints; both static, framing motivated by attention shift.",
+    "clip_05: singlestatic CU on Elias is appropriate—subject static, shot isolates gravitas without violating SECTION V.",
+    "clip_06: full_shot correctly applied for three static characters; satisfies group constraint and reinforces spatial tension."
+  ],
+  "disagreements": [
+    "clip_02: singlestatic CU on Maya is technically compliant but suboptimal—misses opportunity to reflect her reorientation from Clara to Elias as per blocking geometry.",
+    "clip_04: two_static with split_depth on Clara/Maya ignores that Maya’s end_face_to is Clara while Clara’s end_face_to is Maya—valid—but the shot excludes Elias despite his passive presence at S1, which weakens spatial continuity before clip_05’s tight CU on him."
+  ],
+  "suggestions": [
+    {
+      "clip_id": "clip_02",
+      "shot_index": 0,
+      "change": "Replace singlestatic with crosscut between Maya (CU) and Clara (MCU)",
+      "reason": "STATE MATRIX shows all characters static, making crosscut permissible under SECTION V two-person constraints. Blocking indicates Maya faces Clara, but her line carries judgment—crosscut would contrast their static poses while preserving emotional asymmetry better than isolated CU."
+    },
+    {
+      "clip_id": "clip_04",
+      "shot_index": 0,
+      "change": "Replace two_static with full_shot (MLS)",
+      "reason": "All three characters are static; SECTION V group constraint permits full_shot even in dyadic dialogue when third character is visually relevant. Elias remains seated with photo album—a key motif—and excluding him breaks spatial continuity right before his pivotal line in clip_05. Full_shot maintains triangle composition while still foregrounding Clara’s admission."
+    }
+  ],
+  "summary": "Plan largely adheres to SECTION V constraints but misses two opportunities to strengthen spatial storytelling. Clip_02’s isolated CU sacrifices relational contrast; clip_04’s exclusion of Elias disrupts ensemble continuity. Minimal adjustments using permitted templates (crosscut, full_shot) would better serve blocking geometry and foreshadowing goals."
+}

@@ -1,0 +1,99 @@
+{
+  "scene_id": "scene_01",
+  "clips": [
+    {
+      "clip_id": "clip_01",
+      "shots": [
+        {
+          "type": "two_static",
+          "subjects": [
+            "Clara",
+            "Maya"
+          ],
+          "relation": "distant",
+          "framing": "two_shot",
+          "shot_size": "MS",
+          "angle": "Eye",
+          "rationale": "Static composition captures the strained reunion between Clara and Maya; Elias remains seated and out of frame to emphasize the initial dyadic interaction. Both are static, satisfying SECTION V constraints."
+        }
+      ],
+      "rationale": "Clara speaks to Maya while both remain static; a two_static shot frames their uneasy connection without stylistic excess. Elias is seated and not engaged in the exchange, so excluding him maintains focus and continuity."
+    },
+    {
+      "clip_id": "clip_02",
+      "shots": [
+        {
+          "type": "singlestatic",
+          "subject": "Maya",
+          "position": "Head",
+          "direction": "front",
+          "angle": "Eye",
+          "shot_size": "CU",
+          "rationale": "Maya’s blunt observation reveals emotional distance; a close-up on her static face underscores her guarded skepticism while maintaining visual continuity from the prior two-shot."
+        }
+      ],
+      "rationale": "Maya is static and delivers a loaded line—her CU isolates her emotional response. Clara and Elias remain still but are momentarily de-emphasized to highlight Maya’s perspective shift."
+    },
+    {
+      "clip_id": "clip_03",
+      "shots": [
+        {
+          "type": "two_static",
+          "subjects": [
+            "Elias",
+            "Maya"
+          ],
+          "relation": "distant",
+          "framing": "OTS_pair",
+          "shot_size": "MS",
+          "angle": "Eye",
+          "rationale": "Elias interjects from his seated position; an over-the-shoulder two-shot includes Maya listening, visually linking past (Elias with album) and present suspicion. Both are static, satisfying constraints."
+        }
+      ],
+      "rationale": "Elias speaks while seated; Maya turns to him, motivating a reframe to include both. The OTS pairing maintains spatial logic (Elias at S1, Maya at T4) and emphasizes the shift in attention without camera movement."
+    },
+    {
+      "clip_id": "clip_04",
+      "shots": [
+        {
+          "type": "two_static",
+          "subjects": [
+            "Clara",
+            "Maya"
+          ],
+          "relation": "conflict",
+          "framing": "split_depth",
+          "shot_size": "MLS",
+          "angle": "Eye",
+          "rationale": "Clara’s nervous admission about the house creates tension; split-depth framing places Clara slightly closer (foreground) and Maya reacting in mid-ground, visually encoding imbalance while both remain static."
+        }
+      ],
+      "rationale": "Clara addresses Maya directly after turning to her; the static split-depth composition reflects emotional asymmetry. Elias remains seated and passive, so excluding him keeps focus on the pivotal disclosure."
+    },
+    {
+      "clip_id": "clip_05",
+      "shots": [
+        {
+          "type": "singlestatic",
+          "subject": "Elias",
+          "position": "Head",
+          "direction": "front",
+          "angle": "Eye",
+          "shot_size": "CU",
+          "rationale": "Elias delivers a cryptic, weighty line from his seated position; a static CU isolates his solemn expression, reinforcing the gravity of his 'something else' and contrasting with earlier wider frames."
+        }
+      ],
+      "rationale": "Elias is static and now the emotional focal point; his CU signals deepening stakes. The shot avoids movement per SECTION V and maintains continuity by holding on him as both women turn to listen."
+    },
+    {
+      "clip_id": "clip_06",
+      "shots": [
+        {
+          "type": "full_shot",
+          "rationale": "Maya’s metaphorical line encapsulates the scene’s tension; a full shot re-establishes the unstable triangle—Clara standing at T2, Elias seated at S1, Maya at T4—visually confirming her feeling of being out of sync with the hidden agenda."
+        }
+      ],
+      "rationale": "All three characters are static but emotionally charged; the full_shot satisfies SECTION V group constraints by revealing spatial and relational dynamics at the climax of the exchange, reinforcing isolation and foreshadowing conflict."
+    }
+  ]
+}

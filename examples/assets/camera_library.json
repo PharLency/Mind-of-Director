@@ -1,0 +1,854 @@
+{
+  "version": "2.0",
+  "design_principle": "Coverage-first camera planning for dramatic previs. Choose camera language by narrative function, relationship geometry, eyeline continuity, and edit rhythm first; use camera movement only when motivated by a beat or blocking change.",
+  "coordinate_notes": {
+    "floor": "5m x 5m x-z plane",
+    "azimuth_degrees": {
+      "front": 0,
+      "front-right": 45,
+      "right": 90,
+      "back-right": 135,
+      "back": 180,
+      "back-left": -135,
+      "left": -90,
+      "front-left": -45
+    },
+    "elevation_degrees": {
+      "Low": -15,
+      "Eye": 0,
+      "High": 15,
+      "TopDown": 80,
+      "Dutch": 0
+    },
+    "continuity": "Maintain the 180-degree line unless the rationale explicitly marks a motivated axis break."
+  },
+  "enums": {
+    "coverage_role": [
+      "master",
+      "ensemble",
+      "relationship",
+      "single",
+      "reaction",
+      "detail",
+      "subjective",
+      "transition"
+    ],
+    "dramatic_function": [
+      "establish_geography",
+      "tension",
+      "confession",
+      "reaction",
+      "reveal",
+      "power_shift",
+      "isolation",
+      "transition"
+    ],
+    "position": [
+      "Hips",
+      "Spine",
+      "Neck",
+      "Head",
+      "LeftShoulder",
+      "RightShoulder",
+      "Hands",
+      "Prop",
+      "RoomCenter"
+    ],
+    "direction": [
+      "front",
+      "front-left",
+      "front-right",
+      "left",
+      "right",
+      "back-left",
+      "back-right",
+      "back"
+    ],
+    "angle": [
+      "Eye",
+      "High",
+      "TopDown",
+      "Low",
+      "Dutch"
+    ],
+    "shot_size": [
+      "ECU",
+      "CU",
+      "MCU",
+      "MS",
+      "MLS",
+      "WS"
+    ],
+    "framing": [
+      "clean",
+      "dirty",
+      "OTS",
+      "two_shot",
+      "profile",
+      "split_depth",
+      "triangular",
+      "tableau",
+      "insert",
+      "POV"
+    ],
+    "lens_band": [
+      "wide_24_28",
+      "normal_35_50",
+      "portrait_65_85",
+      "telephoto_100_plus"
+    ],
+    "camera_height": [
+      "low",
+      "seated_eye",
+      "standing_eye",
+      "high",
+      "overhead"
+    ],
+    "movement": [
+      "locked_off",
+      "motivated_push_in",
+      "motivated_push_out",
+      "lateral_track",
+      "pan_reframe",
+      "tilt_reframe",
+      "rack_focus",
+      "handheld_drift",
+      "none"
+    ],
+    "focus": [
+      "single_subject",
+      "shared_subjects",
+      "deep_focus",
+      "foreground_to_background",
+      "background_to_foreground",
+      "prop_to_face",
+      "face_to_prop"
+    ],
+    "screen_direction": [
+      "preserve_axis",
+      "reverse_angle",
+      "neutral_axis",
+      "motivated_axis_break"
+    ],
+    "edit_intent": [
+      "hold",
+      "cutaway",
+      "shot_reverse",
+      "reset",
+      "escalate",
+      "release",
+      "bridge"
+    ],
+    "ease": [
+      "linear",
+      "ease-in",
+      "ease-out",
+      "ease-in-out"
+    ]
+  },
+  "shot_size_guide": {
+    "ECU": "Use rarely for eyes, mouth, hands, or a crucial prop detail.",
+    "CU": "Use for confession, shock, guarded reaction, or a line where subtext matters more than body language.",
+    "MCU": "Default dialogue single: face, shoulders, and enough gesture for performance.",
+    "MS": "Default relationship dialogue: hands and body language remain readable.",
+    "MLS": "Use for posture, distance, and relation to furniture.",
+    "WS": "Use for master, ensemble, entrances/exits, spatial reset, or relational geometry."
+  },
+  "lens_guide": {
+    "wide_24_28": "Spatial energy, geography, ensemble, or mild distortion for unease.",
+    "normal_35_50": "Natural dramatic coverage and most dialogue.",
+    "portrait_65_85": "Singles, intimacy, isolation, compressed emotional distance.",
+    "telephoto_100_plus": "Rare in small rooms; use for strong isolation or compressed surveillance feeling."
+  },
+  "templates": [
+    {
+      "type": "master_wide",
+      "status": "active",
+      "subject_count": "all",
+      "intent": "Establish room geography, blocking, and the 180-degree line.",
+      "required_fields": [
+        "type",
+        "coverage_role",
+        "subjects",
+        "shot_size",
+        "framing",
+        "angle",
+        "lens_band",
+        "camera_height",
+        "movement",
+        "focus",
+        "screen_direction",
+        "rationale"
+      ],
+      "recommended_values": {
+        "coverage_role": "master",
+        "shot_size": "WS",
+        "framing": "tableau",
+        "angle": "Eye",
+        "lens_band": "wide_24_28",
+        "camera_height": "standing_eye",
+        "movement": "locked_off",
+        "focus": "deep_focus",
+        "screen_direction": "preserve_axis"
+      },
+      "preferred_when": [
+        "first clip of a scene",
+        "geography is not yet established",
+        "blocking or seating relationship is important"
+      ],
+      "avoid_when": [
+        "the scene has already established geography and a close emotional reaction dominates"
+      ]
+    },
+    {
+      "type": "ensemble_three_shot",
+      "status": "active",
+      "subject_count": "3+",
+      "intent": "Frame three or more characters as a relationship system.",
+      "required_fields": [
+        "type",
+        "coverage_role",
+        "subjects",
+        "shot_size",
+        "framing",
+        "angle",
+        "lens_band",
+        "camera_height",
+        "movement",
+        "focus",
+        "screen_direction",
+        "rationale"
+      ],
+      "recommended_values": {
+        "coverage_role": "ensemble",
+        "shot_size": "WS",
+        "framing": "triangular",
+        "angle": "Eye",
+        "lens_band": "normal_35_50",
+        "camera_height": "standing_eye",
+        "movement": "locked_off",
+        "focus": "deep_focus",
+        "screen_direction": "preserve_axis"
+      },
+      "preferred_when": [
+        "three characters are dramatically active",
+        "power triangle or family/ensemble tension matters",
+        "scene needs spatial reset"
+      ],
+      "avoid_when": [
+        "a single face reaction is the entire beat and geography is already clear"
+      ]
+    },
+    {
+      "type": "two_shot",
+      "status": "active",
+      "subject_count": 2,
+      "intent": "Show relationship distance, alliance, confrontation, or shared silence.",
+      "required_fields": [
+        "type",
+        "coverage_role",
+        "subjects",
+        "shot_size",
+        "framing",
+        "angle",
+        "lens_band",
+        "camera_height",
+        "movement",
+        "focus",
+        "screen_direction",
+        "relation",
+        "rationale"
+      ],
+      "recommended_values": {
+        "coverage_role": "relationship",
+        "shot_size": "MS",
+        "framing": "two_shot",
+        "angle": "Eye",
+        "lens_band": "normal_35_50",
+        "camera_height": "standing_eye",
+        "movement": "locked_off",
+        "focus": "shared_subjects",
+        "screen_direction": "preserve_axis"
+      },
+      "preferred_when": [
+        "two characters are active in the beat",
+        "relationship geometry is more important than isolated reaction",
+        "both subjects are static"
+      ],
+      "avoid_when": [
+        "one subject is walking and the camera cannot plausibly hold both"
+      ]
+    },
+    {
+      "type": "over_the_shoulder",
+      "status": "active",
+      "subject_count": 2,
+      "intent": "Preserve eyeline and conversational tension while favoring one subject.",
+      "required_fields": [
+        "type",
+        "coverage_role",
+        "subject",
+        "foreground_subject",
+        "shot_size",
+        "framing",
+        "angle",
+        "lens_band",
+        "camera_height",
+        "movement",
+        "focus",
+        "screen_direction",
+        "rationale"
+      ],
+      "recommended_values": {
+        "coverage_role": "relationship",
+        "shot_size": "MCU",
+        "framing": "OTS",
+        "angle": "Eye",
+        "lens_band": "portrait_65_85",
+        "camera_height": "standing_eye",
+        "movement": "locked_off",
+        "focus": "single_subject",
+        "screen_direction": "preserve_axis"
+      },
+      "preferred_when": [
+        "dialogue is between two people",
+        "listener presence should remain in frame",
+        "shot-reverse-shot coverage is likely"
+      ],
+      "avoid_when": [
+        "foreground subject would create impossible occlusion from top-down layout"
+      ]
+    },
+    {
+      "type": "clean_single",
+      "status": "active",
+      "subject_count": 1,
+      "intent": "Isolate the speaker or listener without foreground obstruction.",
+      "required_fields": [
+        "type",
+        "coverage_role",
+        "subject",
+        "position",
+        "direction",
+        "shot_size",
+        "angle",
+        "lens_band",
+        "camera_height",
+        "movement",
+        "focus",
+        "screen_direction",
+        "rationale"
+      ],
+      "recommended_values": {
+        "coverage_role": "single",
+        "position": "Head",
+        "direction": "front",
+        "shot_size": "MCU",
+        "angle": "Eye",
+        "lens_band": "portrait_65_85",
+        "camera_height": "standing_eye",
+        "movement": "locked_off",
+        "focus": "single_subject",
+        "screen_direction": "preserve_axis"
+      },
+      "preferred_when": [
+        "one character carries the line",
+        "subtext or micro-expression matters",
+        "blocking is static"
+      ],
+      "avoid_when": [
+        "relationship geography is unclear"
+      ]
+    },
+    {
+      "type": "dirty_single",
+      "status": "active",
+      "subject_count": 2,
+      "intent": "Favor one subject while keeping the other as a partial foreground presence.",
+      "required_fields": [
+        "type",
+        "coverage_role",
+        "subject",
+        "foreground_subject",
+        "position",
+        "direction",
+        "shot_size",
+        "angle",
+        "lens_band",
+        "camera_height",
+        "movement",
+        "focus",
+        "screen_direction",
+        "rationale"
+      ],
+      "recommended_values": {
+        "coverage_role": "single",
+        "position": "Head",
+        "direction": "front-left",
+        "shot_size": "MCU",
+        "angle": "Eye",
+        "lens_band": "portrait_65_85",
+        "camera_height": "standing_eye",
+        "movement": "locked_off",
+        "focus": "single_subject",
+        "screen_direction": "preserve_axis"
+      },
+      "preferred_when": [
+        "speaker and listener relationship should remain felt",
+        "tension comes from proximity or opposition"
+      ],
+      "avoid_when": [
+        "foreground subject would block the face",
+        "the beat needs clean isolation"
+      ]
+    },
+    {
+      "type": "reaction_single",
+      "status": "active",
+      "subject_count": 1,
+      "intent": "Prioritize a listener's reaction over the speaker's line.",
+      "required_fields": [
+        "type",
+        "coverage_role",
+        "subject",
+        "position",
+        "direction",
+        "shot_size",
+        "angle",
+        "lens_band",
+        "camera_height",
+        "movement",
+        "focus",
+        "screen_direction",
+        "rationale"
+      ],
+      "recommended_values": {
+        "coverage_role": "reaction",
+        "position": "Head",
+        "direction": "front",
+        "shot_size": "CU",
+        "angle": "Eye",
+        "lens_band": "portrait_65_85",
+        "camera_height": "standing_eye",
+        "movement": "locked_off",
+        "focus": "single_subject",
+        "screen_direction": "preserve_axis"
+      },
+      "preferred_when": [
+        "the emotional value is in the listener",
+        "speaker says something revealing or hurtful"
+      ],
+      "avoid_when": [
+        "speaker action must be seen for plot clarity"
+      ]
+    },
+    {
+      "type": "insert_detail",
+      "status": "active",
+      "subject_count": "prop",
+      "intent": "Cut to a prop, hands, document, glass, photograph, or other story detail.",
+      "required_fields": [
+        "type",
+        "coverage_role",
+        "subject",
+        "shot_size",
+        "framing",
+        "angle",
+        "lens_band",
+        "camera_height",
+        "movement",
+        "focus",
+        "screen_direction",
+        "rationale"
+      ],
+      "recommended_values": {
+        "coverage_role": "detail",
+        "shot_size": "ECU",
+        "framing": "insert",
+        "angle": "High",
+        "lens_band": "portrait_65_85",
+        "camera_height": "high",
+        "movement": "locked_off",
+        "focus": "prop_to_face",
+        "screen_direction": "neutral_axis"
+      },
+      "preferred_when": [
+        "a prop changes meaning",
+        "hands or object action carries story information"
+      ],
+      "avoid_when": [
+        "there is no meaningful object beat"
+      ]
+    },
+    {
+      "type": "pov_subjective",
+      "status": "active",
+      "subject_count": 1,
+      "intent": "Show a character's subjective view or emotional perception.",
+      "required_fields": [
+        "type",
+        "coverage_role",
+        "subject",
+        "target",
+        "shot_size",
+        "framing",
+        "angle",
+        "lens_band",
+        "camera_height",
+        "movement",
+        "focus",
+        "screen_direction",
+        "rationale"
+      ],
+      "recommended_values": {
+        "coverage_role": "subjective",
+        "shot_size": "MS",
+        "framing": "POV",
+        "angle": "Eye",
+        "lens_band": "normal_35_50",
+        "camera_height": "standing_eye",
+        "movement": "handheld_drift",
+        "focus": "single_subject",
+        "screen_direction": "motivated_axis_break"
+      },
+      "preferred_when": [
+        "scene needs subjective anxiety, memory, or suspicion",
+        "a character scans another person or object"
+      ],
+      "avoid_when": [
+        "objective geography must remain stable"
+      ]
+    },
+    {
+      "type": "push_in_single",
+      "status": "active",
+      "subject_count": 1,
+      "intent": "Move closer to a subject as emotional pressure increases.",
+      "required_fields": [
+        "type",
+        "coverage_role",
+        "subject",
+        "position",
+        "direction",
+        "start_shot_size",
+        "end_shot_size",
+        "angle",
+        "lens_band",
+        "camera_height",
+        "movement",
+        "focus",
+        "screen_direction",
+        "ease",
+        "rationale"
+      ],
+      "recommended_values": {
+        "coverage_role": "single",
+        "position": "Head",
+        "direction": "front",
+        "start_shot_size": "MS",
+        "end_shot_size": "CU",
+        "angle": "Eye",
+        "lens_band": "portrait_65_85",
+        "camera_height": "standing_eye",
+        "movement": "motivated_push_in",
+        "focus": "single_subject",
+        "screen_direction": "preserve_axis",
+        "ease": "ease-in-out"
+      },
+      "preferred_when": [
+        "confession or realization escalates during the clip"
+      ],
+      "avoid_when": [
+        "clip is emotionally flat",
+        "duration is too short for movement"
+      ]
+    },
+    {
+      "type": "tracking_single",
+      "status": "active",
+      "subject_count": 1,
+      "intent": "Follow a walking subject while keeping screen direction coherent.",
+      "required_fields": [
+        "type",
+        "coverage_role",
+        "subject",
+        "shot_size",
+        "framing",
+        "angle",
+        "lens_band",
+        "camera_height",
+        "movement",
+        "focus",
+        "screen_direction",
+        "ease",
+        "rationale"
+      ],
+      "recommended_values": {
+        "coverage_role": "transition",
+        "shot_size": "MS",
+        "framing": "clean",
+        "angle": "Eye",
+        "lens_band": "normal_35_50",
+        "camera_height": "standing_eye",
+        "movement": "lateral_track",
+        "focus": "single_subject",
+        "screen_direction": "preserve_axis",
+        "ease": "ease-in-out"
+      },
+      "preferred_when": [
+        "subject is walking",
+        "blocking changes position inside the clip"
+      ],
+      "avoid_when": [
+        "subject is static"
+      ]
+    },
+    {
+      "type": "pan_reframe",
+      "status": "active",
+      "subject_count": "1+",
+      "intent": "Pan from one subject, object, or eyeline target to another without changing camera position.",
+      "required_fields": [
+        "type",
+        "coverage_role",
+        "subject",
+        "target",
+        "shot_size",
+        "framing",
+        "angle",
+        "lens_band",
+        "camera_height",
+        "movement",
+        "focus",
+        "screen_direction",
+        "ease",
+        "rationale"
+      ],
+      "recommended_values": {
+        "coverage_role": "transition",
+        "shot_size": "MS",
+        "framing": "clean",
+        "angle": "Eye",
+        "lens_band": "normal_35_50",
+        "camera_height": "standing_eye",
+        "movement": "pan_reframe",
+        "focus": "deep_focus",
+        "screen_direction": "preserve_axis",
+        "ease": "ease-in-out"
+      },
+      "preferred_when": [
+        "face_to changes inside the beat",
+        "attention shifts from speaker to listener or object"
+      ],
+      "avoid_when": [
+        "a cut would be cleaner than a motivated pan"
+      ]
+    },
+    {
+      "type": "rack_focus_between",
+      "status": "active",
+      "subject_count": 2,
+      "intent": "Transfer attention between foreground and background subjects.",
+      "required_fields": [
+        "type",
+        "coverage_role",
+        "subjects",
+        "shot_size",
+        "framing",
+        "angle",
+        "lens_band",
+        "camera_height",
+        "movement",
+        "focus",
+        "screen_direction",
+        "rationale"
+      ],
+      "recommended_values": {
+        "coverage_role": "relationship",
+        "shot_size": "MS",
+        "framing": "split_depth",
+        "angle": "Eye",
+        "lens_band": "portrait_65_85",
+        "camera_height": "standing_eye",
+        "movement": "rack_focus",
+        "focus": "foreground_to_background",
+        "screen_direction": "preserve_axis"
+      },
+      "preferred_when": [
+        "one character's reaction overtakes another's line",
+        "subjects are staged in depth"
+      ],
+      "avoid_when": [
+        "subjects are flat side-by-side"
+      ]
+    },
+    {
+      "type": "crosscut_pair",
+      "status": "active",
+      "subject_count": 2,
+      "intent": "Represent a planned shot-reverse-shot pair as one previs camera segment.",
+      "required_fields": [
+        "type",
+        "coverage_role",
+        "subjects",
+        "shot_A",
+        "shot_B",
+        "framing",
+        "angle",
+        "lens_band",
+        "camera_height",
+        "movement",
+        "focus",
+        "screen_direction",
+        "edit_intent",
+        "rationale"
+      ],
+      "recommended_values": {
+        "coverage_role": "relationship",
+        "shot_A": "MCU",
+        "shot_B": "MCU",
+        "framing": "OTS",
+        "angle": "Eye",
+        "lens_band": "portrait_65_85",
+        "camera_height": "standing_eye",
+        "movement": "locked_off",
+        "focus": "single_subject",
+        "screen_direction": "preserve_axis",
+        "edit_intent": "shot_reverse"
+      },
+      "preferred_when": [
+        "dialogue ping-pongs between two characters",
+        "reactions are equally important"
+      ],
+      "avoid_when": [
+        "one subject should fully dominate the beat"
+      ]
+    },
+    {
+      "type": "singlestatic",
+      "status": "deprecated_legacy",
+      "subject_count": 1,
+      "intent": "Legacy alias for clean_single.",
+      "required_fields": [
+        "type",
+        "subject",
+        "position",
+        "direction",
+        "angle",
+        "shot_size",
+        "rationale"
+      ]
+    },
+    {
+      "type": "two_static",
+      "status": "deprecated_legacy",
+      "subject_count": 2,
+      "intent": "Legacy alias for two_shot or over_the_shoulder.",
+      "required_fields": [
+        "type",
+        "subjects",
+        "relation",
+        "framing",
+        "shot_size",
+        "angle",
+        "rationale"
+      ]
+    },
+    {
+      "type": "full_shot",
+      "status": "deprecated_legacy",
+      "subject_count": "3+",
+      "intent": "Legacy alias for ensemble_three_shot.",
+      "required_fields": [
+        "type",
+        "subjects",
+        "shot_size",
+        "angle",
+        "rationale"
+      ]
+    }
+  ],
+  "selection_rules": {
+    "opening_or_new_geography": {
+      "preferred": [
+        "master_wide",
+        "ensemble_three_shot"
+      ],
+      "avoid": [
+        "CU",
+        "ECU"
+      ]
+    },
+    "single_static_speaker": {
+      "preferred": [
+        "clean_single",
+        "dirty_single",
+        "push_in_single"
+      ],
+      "avoid": [
+        "tracking_single"
+      ]
+    },
+    "listener_reaction": {
+      "preferred": [
+        "reaction_single",
+        "dirty_single",
+        "rack_focus_between"
+      ],
+      "avoid": [
+        "master_wide"
+      ]
+    },
+    "two_static_dialogue": {
+      "preferred": [
+        "two_shot",
+        "over_the_shoulder",
+        "crosscut_pair",
+        "rack_focus_between"
+      ],
+      "avoid": [
+        "tracking_single"
+      ]
+    },
+    "walking_or_position_change": {
+      "preferred": [
+        "tracking_single",
+        "master_wide",
+        "pan_reframe"
+      ],
+      "avoid": [
+        "clean_single",
+        "two_shot"
+      ]
+    },
+    "three_person_active": {
+      "preferred": [
+        "ensemble_three_shot",
+        "master_wide"
+      ],
+      "allowed_close_alternative": [
+        "reaction_single",
+        "clean_single",
+        "dirty_single"
+      ],
+      "rule": "Do not force a wide shot for every three-person clip. Use ensemble coverage when relationship geography matters; cut closer when one face owns the beat and geography is already established."
+    },
+    "prop_or_object_beat": {
+      "preferred": [
+        "insert_detail",
+        "rack_focus_between"
+      ],
+      "avoid": [
+        "ensemble_three_shot"
+      ]
+    }
+  },
+  "continuity_rules": [
+    "Establish the room and axis before relying on close singles.",
+    "Maintain consistent screen direction across shot-reverse-shot coverage.",
+    "Use wider resets after major position changes or before ensemble emotional turns.",
+    "Do not add camera movement just because a template exists; movement must correspond to emotional or blocking change.",
+    "Close-ups should mark escalation, confession, or reaction rather than routine coverage.",
+    "Dutch or subjective angles must be rare and explicitly motivated."
+  ]
+}

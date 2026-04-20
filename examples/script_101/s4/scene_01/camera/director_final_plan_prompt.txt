@@ -1,0 +1,1057 @@
+You are the DIRECTOR. Merge the two cinematographers' plans and their cross reviews into a final camera plan. Resolve conflicts by prioritizing clarity, emotional truth, and continuity WHILE strictly obeying SECTION V with the STATE MATRIX. Keep changes minimal; return a COMPLETE plan for ALL clips.
+
+### Selected scene:
+scene_01
+
+### Script context (only this scene):
+**Scene 1: Reunion and Revelation**
+Involved characters: Elias, Clara, Maya
+Location: a living room table arrangement
+Plot: Maya returns home after months of estrangement to join her parents for what she believes is a quiet 30th anniversary dinner. The room is warmly lit, but tension hums beneath the surface. Clara busies herself with wine glasses, her smile strained, while Elias sits with a photo album—perhaps from happier times. Their polite greetings quickly give way to Clara’s nervous admission that they must discuss the house’s future, and Elias adds that he has an important announcement after dinner. Maya senses something deeper than financial trouble, and the fragile civility masks unspoken wounds.
+Dialogue goal: To establish uneasy reunion and foreshadow deeper conflict by having the parents hint at life-altering news while Maya registers growing suspicion.
+
+### Location:
+a living room table arrangement
+
+### Plot focus:
+Maya returns home after months of estrangement to join her parents for what she believes is a quiet 30th anniversary dinner. The room is warmly lit, but tension hums beneath the surface. Clara busies herself with wine glasses, her smile strained, while Elias sits with a photo album—perhaps from happier times. Their polite greetings quickly give way to Clara’s nervous admission that they must discuss the house’s future, and Elias adds that he has an important announcement after dinner. Maya senses something deeper than financial trouble, and the fragile civility masks unspoken wounds.
+
+### Dialogue goal:
+To establish uneasy reunion and foreshadow deeper conflict by having the parents hint at life-altering news while Maya registers growing suspicion.
+
+### Characters in this scene:
+[
+  "Clara",
+  "Elias",
+  "Maya"
+]
+
+### Floor coordinate system:
+The scene's floor is a five by five meter x–z plane. The top-left corner of this plane is (0, 0) and the bottom-right corner is (5, 5). The positive x direction represents the front direction, and the positive z direction represents the right direction. All measurements are in meters.
+
+### Reference images:
+- Image A: topdown_detect.png (yellow rectangles with object names).
+- Image B: topdown_annotated.png (yellow rectangles are standing zones labeled T1, T2, ...; brown rectangles are seat zones labeled S1, S2, ...).
+
+### Blocking (final, JSON):
+{
+  "scene_id": "scene_01",
+  "clips": [
+    {
+      "clip_id": "clip_01",
+      "speaker": "Clara",
+      "content": "You look tired, sweetheart. Long drive?",
+      "characters": [
+        {
+          "name": "Clara",
+          "start_point": "T2",
+          "start_state": "standing",
+          "start_face_to": "Maya",
+          "end_point": "T2",
+          "end_state": "standing",
+          "end_face_to": "Maya",
+          "position_change": false
+        },
+        {
+          "name": "Elias",
+          "start_point": "S1",
+          "start_state": "sitting",
+          "start_face_to": null,
+          "end_point": "S1",
+          "end_state": "sitting",
+          "end_face_to": null,
+          "position_change": false
+        },
+        {
+          "name": "Maya",
+          "start_point": "T4",
+          "start_state": "standing",
+          "start_face_to": "Clara",
+          "end_point": "T4",
+          "end_state": "standing",
+          "end_face_to": "Clara",
+          "position_change": false
+        }
+      ]
+    },
+    {
+      "clip_id": "clip_02",
+      "speaker": "Maya",
+      "content": "Traffic was fine. You both look... older.",
+      "characters": [
+        {
+          "name": "Clara",
+          "start_point": "T2",
+          "start_state": "standing",
+          "start_face_to": "Maya",
+          "end_point": "T2",
+          "end_state": "standing",
+          "end_face_to": "Maya",
+          "position_change": false
+        },
+        {
+          "name": "Elias",
+          "start_point": "S1",
+          "start_state": "sitting",
+          "start_face_to": null,
+          "end_point": "S1",
+          "end_state": "sitting",
+          "end_face_to": null,
+          "position_change": false
+        },
+        {
+          "name": "Maya",
+          "start_point": "T4",
+          "start_state": "standing",
+          "start_face_to": "Clara",
+          "end_point": "T4",
+          "end_state": "standing",
+          "end_face_to": "Clara",
+          "position_change": false
+        }
+      ]
+    },
+    {
+      "clip_id": "clip_03",
+      "speaker": "Elias",
+      "content": "Thirty years. Hard to believe.",
+      "characters": [
+        {
+          "name": "Clara",
+          "start_point": "T2",
+          "start_state": "standing",
+          "start_face_to": "Maya",
+          "end_point": "T2",
+          "end_state": "standing",
+          "end_face_to": "Elias",
+          "position_change": false
+        },
+        {
+          "name": "Elias",
+          "start_point": "S1",
+          "start_state": "sitting",
+          "start_face_to": null,
+          "end_point": "S1",
+          "end_state": "sitting",
+          "end_face_to": null,
+          "position_change": false
+        },
+        {
+          "name": "Maya",
+          "start_point": "T4",
+          "start_state": "standing",
+          "start_face_to": "Clara",
+          "end_point": "T4",
+          "end_state": "standing",
+          "end_face_to": "Elias",
+          "position_change": false
+        }
+      ]
+    },
+    {
+      "clip_id": "clip_04",
+      "speaker": "Clara",
+      "content": "We should talk about the house tonight. After dinner.",
+      "characters": [
+        {
+          "name": "Clara",
+          "start_point": "T2",
+          "start_state": "standing",
+          "start_face_to": "Elias",
+          "end_point": "T2",
+          "end_state": "standing",
+          "end_face_to": "Maya",
+          "position_change": false
+        },
+        {
+          "name": "Elias",
+          "start_point": "S1",
+          "start_state": "sitting",
+          "start_face_to": null,
+          "end_point": "S1",
+          "end_state": "sitting",
+          "end_face_to": null,
+          "position_change": false
+        },
+        {
+          "name": "Maya",
+          "start_point": "T4",
+          "start_state": "standing",
+          "start_face_to": "Elias",
+          "end_point": "T4",
+          "end_state": "standing",
+          "end_face_to": "Clara",
+          "position_change": false
+        }
+      ]
+    },
+    {
+      "clip_id": "clip_05",
+      "speaker": "Elias",
+      "content": "There’s something else too. Something I need to tell you.",
+      "characters": [
+        {
+          "name": "Clara",
+          "start_point": "T2",
+          "start_state": "standing",
+          "start_face_to": "Maya",
+          "end_point": "T2",
+          "end_state": "standing",
+          "end_face_to": "Elias",
+          "position_change": false
+        },
+        {
+          "name": "Elias",
+          "start_point": "S1",
+          "start_state": "sitting",
+          "start_face_to": null,
+          "end_point": "S1",
+          "end_state": "sitting",
+          "end_face_to": null,
+          "position_change": false
+        },
+        {
+          "name": "Maya",
+          "start_point": "T4",
+          "start_state": "standing",
+          "start_face_to": "Clara",
+          "end_point": "T4",
+          "end_state": "standing",
+          "end_face_to": "Elias",
+          "position_change": false
+        }
+      ]
+    },
+    {
+      "clip_id": "clip_06",
+      "speaker": "Maya",
+      "content": "Why do I feel like I walked into a storm wearing sunglasses?",
+      "characters": [
+        {
+          "name": "Clara",
+          "start_point": "T2",
+          "start_state": "standing",
+          "start_face_to": "Elias",
+          "end_point": "T2",
+          "end_state": "standing",
+          "end_face_to": "Maya",
+          "position_change": false
+        },
+        {
+          "name": "Elias",
+          "start_point": "S1",
+          "start_state": "sitting",
+          "start_face_to": null,
+          "end_point": "S1",
+          "end_state": "sitting",
+          "end_face_to": null,
+          "position_change": false
+        },
+        {
+          "name": "Maya",
+          "start_point": "T4",
+          "start_state": "standing",
+          "start_face_to": "Elias",
+          "end_point": "T4",
+          "end_state": "standing",
+          "end_face_to": "Clara",
+          "position_change": false
+        }
+      ]
+    }
+  ],
+  "design_rationale": "The staging establishes an unstable triangle: Maya stands at T4 (right side of coffee table 10), Clara at T2 (left side), and Elias seated at S1 (on white sofa 00, facing the table). This composition visually isolates Maya while positioning the parents on opposite sides of the central coffee table, reinforcing emotional distance and tension. Clara begins facing Maya to perform maternal concern, consistent with her line. Elias remains seated near the deco photo album 00 (on desk 12), subtly linking him to the past. Maya faces Clara initially, then shifts attention to Elias as the conversation deepens—motivated by his interjection and the growing unease. All facing changes are driven by speaker shifts and emotional beats: when Elias speaks, both women turn to him; when Clara speaks again, Maya reorients to her. No character moves position because no dialogue or emotional cue demands physical relocation—Clara is already 'busying herself' near T2 (close to wine glass 37 and coffee table 10), Elias is settled with the photo album, and Maya remains standing as the newcomer. Seat points enforce null face_to per constraints. All points are interior, avoiding edges, and exclusivity is maintained—no two characters share a point. Continuity is preserved across clips: each character’s start values match the prior end values. No unnecessary movement is introduced."
+}
+
+### STATE MATRIX (derived from position_change; false→static, true→walking):
+{
+  "clip_01": {
+    "Clara": "static",
+    "Elias": "static",
+    "Maya": "static"
+  },
+  "clip_02": {
+    "Clara": "static",
+    "Elias": "static",
+    "Maya": "static"
+  },
+  "clip_03": {
+    "Clara": "static",
+    "Elias": "static",
+    "Maya": "static"
+  },
+  "clip_04": {
+    "Clara": "static",
+    "Elias": "static",
+    "Maya": "static"
+  },
+  "clip_05": {
+    "Clara": "static",
+    "Elias": "static",
+    "Maya": "static"
+  },
+  "clip_06": {
+    "Clara": "static",
+    "Elias": "static",
+    "Maya": "static"
+  }
+}
+
+### CINEMATIC CAMERA PROMPT TEMPLATES (verbatim):
+============================================================
+CINEMATIC CAMERA PROMPT TEMPLATES
+============================================================
+
+============================================================
+SHARED ENUMERATIONS
+============================================================
+
+position: {"Hips","Spine","Neck","Head","LeftShoulder","RightShoulder",
+           "LeftLeg","RightLeg","LeftFoot","RightFoot"}
+
+direction: {"front","front-left","front-right","left","right",
+            "back-left","back-right","back"}
+
+angle: {"Eye","High","TopDown","Low","Dutch"}
+
+level: {"very_far","far","mid","near","very_near"}
+
+movement_mode: {"dolly","zoom","combo"}
+
+ease: {"linear","ease-in","ease-out","ease-in-out"}
+
+shot_size: {"ECU","CU","MCU","MS","MLS","WS"}
+
+Typical Unity-style mapping:
+  azimuthDeg(front=0, right=90, left=-90, back=180)
+  elevationDeg(Eye=0, High≈15, TopDown≈80, Low≈-15, Dutch≈0)
+  radius_norm(very_far≈1.0, far≈0.8, mid≈0.55, near≈0.35, very_near≈0.2)
+
+------------------------------------------------------------
+RELATIONAL EXTENSIONS (for two-person templates)
+------------------------------------------------------------
+relation: {"equal","dominant_A","dominant_B","intimate","distant","conflict"}
+framing: {"two_shot","OTS_pair","profile_duet","split_depth","cross_cut"}
+focus_mode: {"both","focus_A","focus_B","rack_between"}
+
+============================================================
+SECTION I — SINGLE-PERSON CAMERA TEMPLATES
+============================================================
+
+[1] SINGLESTATIC
+------------------------------------------------------------
+Intent: Express stillness or emotional reflection.
+Description: Static camera on one subject.
+Use When: Calm beats, introspection, silent moments.
+Output:
+{
+  "type": "singlestatic",
+  "subject": "<character>",
+  "position": "<position>",
+  "direction": "<direction>",
+  "angle": "<angle>",
+  "shot_size": "<shot_size>",
+  "rationale": "Why this framing fits the emotion or scene."
+}
+
+------------------------------------------------------------
+
+[2] SINGLEDYNAMIC_PUSHIN
+------------------------------------------------------------
+Intent: Intensify focus or emotion.
+Description: Move from far → near (dolly/zoom).
+Use When: Realization, climax, emotional emphasis.
+Output:
+{
+  "type": "push_in",
+  "subject": "<character>",
+  "position": "<position>",
+  "direction": "<direction>",
+  "angle": "<angle>",
+  "start_level": "<level>",
+  "end_level": "<level>",
+  "movement_mode": "<movement_mode>",
+  "ease": "<ease>",
+  "scale_compensation": "<none|partial|full_lock|face_lock>",
+  "rationale": "Explain emotional progression from distance to intimacy."
+}
+
+------------------------------------------------------------
+
+[3] SINGLEDYNAMIC_PUSHOUT
+------------------------------------------------------------
+Intent: Release tension or reveal context.
+Description: Move from near → far.
+Use When: Emotional relief, detachment.
+Output: Same as push_in but with `"type":"push_out"`.
+
+------------------------------------------------------------
+
+[4] SINGLEDYNAMIC_TRUCK
+------------------------------------------------------------
+Intent: Maintain parallax or follow lateral motion.
+Description: Horizontal move parallel to subject.
+Use When: Walking, pacing, tension build-up.
+Output:
+{
+  "type": "truck",
+  "subject": "<character>",
+  "lateral": "<left|right>",
+  "level": "<level>",
+  "ease": "<ease>",
+  "rationale": "Tracks parallel to convey presence and continuity."
+}
+
+------------------------------------------------------------
+
+[5] SINGLEDYNAMIC_ORBIT
+------------------------------------------------------------
+Intent: Add dynamic energy or spatial reveal.
+Description: Camera arcs around subject (constant radius).
+Use When: Emotional chaos, revelation, style beat.
+Output:
+{
+  "type": "orbit",
+  "subject": "<character>",
+  "arc_degrees": 90,
+  "clockwise": true,
+  "ease": "<ease>",
+  "rationale": "Orbit around subject to express dynamic emotion."
+}
+
+------------------------------------------------------------
+
+[6] SINGLEDYNAMIC_CRANE
+------------------------------------------------------------
+Intent: Transition vertically and change distance.
+Description: Combined lift/drop and dolly move.
+Use When: Transformation, realization, scale reveal.
+Output:
+{
+  "type": "crane",
+  "subject": "<character>",
+  "start_level": "<level>",
+  "end_level": "<level>",
+  "start_elev": "<low|eye|high|top>",
+  "end_elev": "<low|eye|high|top>",
+  "ease": "<ease>",
+  "rationale": "Vertical and distance shift to reframe emotional scale."
+}
+
+------------------------------------------------------------
+
+[7] SINGLEDYNAMIC_PEDESTAL
+------------------------------------------------------------
+Intent: Adjust vertical dominance or presence.
+Description: Vertical move only.
+Use When: Power shifts or stand/sit transitions.
+Output:
+{
+  "type": "pedestal",
+  "subject": "<character>",
+  "start_elev": "<low|eye|high|top>",
+  "end_elev": "<low|eye|high|top>",
+  "ease": "<ease>",
+  "rationale": "Symbolic rise/fall expressing power or emotion."
+}
+
+------------------------------------------------------------
+
+[8] SINGLEDYNAMIC_PAN
+------------------------------------------------------------
+Intent: Reveal or follow gaze.
+Description: Camera rotates horizontally (yaw).
+Use When: Character turns head or notices something.
+Output:
+{
+  "type": "pan",
+  "subject": "<character>",
+  "pan_degrees": 45,
+  "ease": "<ease>",
+  "rationale": "Follow gaze or reveal off-screen space."
+}
+
+------------------------------------------------------------
+
+[9] SINGLEDYNAMIC_TILT
+------------------------------------------------------------
+Intent: Explore vertical space or emotional scale.
+Description: Camera tilts up/down.
+Use When: Awe, fear, dominance, or vulnerability.
+Output:
+{
+  "type": "tilt",
+  "subject": "<character>",
+  "tilt_degrees": -30,
+  "ease": "<ease>",
+  "rationale": "Vertical reveal showing power or fragility."
+}
+
+------------------------------------------------------------
+
+[10] SINGLEDYNAMIC_ROLL
+------------------------------------------------------------
+Intent: Express disorientation or style accent.
+Description: Rotate camera around viewing axis.
+Use When: Shock, confusion, or stylized transitions.
+Output:
+{
+  "type": "roll",
+  "subject": "<character>",
+  "roll_degrees": 20,
+  "ease": "<ease>",
+  "rationale": "Dutch roll adds visual tension and instability."
+}
+
+------------------------------------------------------------
+
+[11] SINGLEDYNAMIC_ZOOM
+------------------------------------------------------------
+Intent: Change psychological distance without motion.
+Description: Lens zoom in/out.
+Use When: Realization, focus shift, tension.
+Output:
+{
+  "type": "zoom",
+  "subject": "<character>",
+  "start_size": "<shot_size>",
+  "end_size": "<shot_size>",
+  "ease": "<ease>",
+  "rationale": "Zoom compresses or expands emotional intensity."
+}
+
+------------------------------------------------------------
+
+[12] SINGLEDYNAMIC_RACKFOCUS
+------------------------------------------------------------
+Intent: Shift viewer attention within one shot.
+Description: Change focus plane (prop → face, etc.).
+Use When: Reaction or realization.
+Output:
+{
+  "type": "rack_focus",
+  "subject": "<character>",
+  "focus_from": "<eye|mouth|hands|prop|background>",
+  "focus_to": "<eye|mouth|hands|prop|background>",
+  "ease": "<ease>",
+  "rationale": "Rack focus shifts emotional attention."
+}
+
+============================================================
+SECTION II — TWO-PERSON CAMERA TEMPLATES
+============================================================
+
+[1] TWOSTATIC
+------------------------------------------------------------
+Intent: Present relationship balance or tension.
+Description: Two subjects framed statically.
+Use When: Dialogue, reconciliation, argument.
+Output:
+{
+  "type": "two_static",
+  "subjects": ["A","B"],
+  "relation": "<relation>",
+  "framing": "<framing>",
+  "shot_size": "<shot_size>",
+  "angle": "<angle>",
+  "rationale": "Static composition defines relational geometry."
+}
+
+------------------------------------------------------------
+
+[2] TWODYNAMIC_PUSHIN_PAIR
+------------------------------------------------------------
+Intent: Intensify shared emotion or unity.
+Description: Push both subjects equally closer.
+Use When: Mutual realization or intimacy.
+Output:
+{
+  "type": "push_in_pair",
+  "subjects": ["A","B"],
+  "relation": "<relation>",
+  "start_level": "<level>",
+  "end_level": "<level>",
+  "ease": "<ease>",
+  "rationale": "Push in on both to heighten shared emotion."
+}
+
+------------------------------------------------------------
+
+[3] TWODYNAMIC_PUSHIN_TO_A
+------------------------------------------------------------
+Intent: Transfer focus from shared frame to A.
+Description: Camera moves closer to subject A.
+Use When: Dominance shift or emotional isolation.
+Output:
+{
+  "type": "push_in_to_A",
+  "subjects": ["A","B"],
+  "relation": "<relation>",
+  "start_level": "<level>",
+  "end_level": "<level>",
+  "ease": "<ease>",
+  "rationale": "Shift focus to A to underline control or emotion."
+}
+
+------------------------------------------------------------
+
+[4] TWODYNAMIC_TRUCK_BETWEEN
+------------------------------------------------------------
+Intent: Show shifting power or tension between two.
+Description: Truck move laterally A ↔ B.
+Use When: Conflict or argument.
+Output:
+{
+  "type": "truck_between",
+  "subjects": ["A","B"],
+  "relation": "<relation>",
+  "ease": "<ease>",
+  "rationale": "Traverse between A and B to visualize tension."
+}
+
+------------------------------------------------------------
+
+[5] TWODYNAMIC_ORBIT_DUET
+------------------------------------------------------------
+Intent: Express relational rhythm or spin.
+Description: Orbit around both subjects.
+Use When: Dance, confrontation, connection.
+Output:
+{
+  "type": "orbit_duet",
+  "subjects": ["A","B"],
+  "arc_degrees": 90,
+  "clockwise": true,
+  "ease": "<ease>",
+  "rationale": "Circular motion symbolizes relational dynamics."
+}
+
+------------------------------------------------------------
+
+[6] TWODYNAMIC_CROSSCUT
+------------------------------------------------------------
+Intent: Alternate perspective or emotion between two.
+Description: Simulated intercut pattern A↔B.
+Use When: Dialogue or inner conflict.
+Output:
+{
+  "type": "crosscut",
+  "subjects": ["A","B"],
+  "shot_A": "<shot_size>",
+  "shot_B": "<shot_size>",
+  "rhythm": "<steady|fast|syncopated>",
+  "rationale": "Cutting rhythm contrasts emotional reactions."
+}
+
+------------------------------------------------------------
+
+[7] TWODYNAMIC_RACKFOCUS_BETWEEN
+------------------------------------------------------------
+Intent: Shift depth focus between A and B.
+Description: Rack focus across foreground/background.
+Use When: Emotional or conversational shift.
+Output:
+{
+  "type": "rack_focus_between",
+  "subjects": ["A","B"],
+  "relation": "<relation>",
+  "rationale": "Focus shift transfers emotional weight."
+}
+
+------------------------------------------------------------
+
+[8] TWODYNAMIC_PEDESTAL_DUET
+------------------------------------------------------------
+Intent: Symbolize power or reconciliation vertically.
+Description: Vertical move on both subjects.
+Use When: Resolution or transformation.
+Output:
+{
+  "type": "pedestal_duet",
+  "subjects": ["A","B"],
+  "start_elev": "<low|eye|high|top>",
+  "end_elev": "<low|eye|high|top>",
+  "rationale": "Vertical change mirrors emotional resolution."
+}
+
+============================================================
+SECTION III — GROUP CAMERA TEMPLATES
+============================================================
+
+[1] FULL_SHOT
+------------------------------------------------------------
+Intent: Establish group dynamics or spatial layout.
+Description: Wide framing including three or more subjects.
+Use When: Ensemble scenes, introductions, or environmental context.
+Output:
+{
+  "type": "full_shot",
+  "rationale": "Why a group-wide composition is chosen."
+}
+
+
+============================================================
+SECTION V — CAMERA SELECTION CONSTRAINTS
+============================================================
+
+These constraints guide the model in choosing appropriate
+camera templates based on character motion state.
+
+------------------------------------------------------------
+CONSTRAINT: CHARACTER STATE → CAMERA SUITABILITY
+------------------------------------------------------------
+
+state: {"static","walking"}
+
+# 1️⃣ SINGLE-PERSON CAMERA CONSTRAINTS
+------------------------------------------------------------
+If state == "static":
+    Preferred templates:
+        ["singlestatic","push_in","push_out","orbit","crane",
+         "pedestal","pan","tilt","roll","zoom","rack_focus"]
+    Avoid:
+        ["truck"]  # lateral tracking lacks motivation when subject is static.
+
+If state == "walking":
+    Preferred templates:
+        ["truck","push_in","push_out","push_in_to_A","push_in_pair",
+         "crane","pan","crosscut","full_shot"]
+    Use with caution:
+        ["orbit","pedestal","tilt","rack_focus"]
+    Avoid:
+        ["singlestatic","two_static","roll"]
+
+# 2️⃣ TWO-PERSON CAMERA CONSTRAINTS
+------------------------------------------------------------
+If both characters are static:
+    Preferred templates:
+        ["two_static","push_in_pair","push_in_to_A",
+         "orbit_duet","rack_focus_between","pedestal_duet","crosscut"]
+    Avoid:
+        ["truck_between"]  # best used when characters move or circle each other.
+
+If one or both characters are walking:
+    Preferred templates:
+        ["truck_between","push_in_pair","push_in_to_A",
+         "crane","crosscut","full_shot"]
+    Use with caution:
+        ["orbit_duet","pedestal_duet"]
+    Avoid:
+        ["two_static"]
+
+# 3️⃣ GROUP CAMERA CONSTRAINTS
+------------------------------------------------------------
+If multiple characters (≥3):
+    Always prefer:
+        ["full_shot"]
+    Reason:
+        Full-shot best establishes spatial relations and ensemble movement.
+
+------------------------------------------------------------
+GENERAL LOGIC
+------------------------------------------------------------
+- Static moments focus on composition, eye direction, and emotion.
+- Walking or moving moments emphasize parallax, following motion,
+  and spatial continuity.
+- Avoid using stationary setups (e.g., singlestatic, two_static)
+  for dynamic walking scenes unless dramatically motivated.
+- "truck" and "push" styles integrate best with movement.
+- "roll" and "orbit" are stylistic; reserve for special beats.
+
+------------------------------------------------------------
+EXAMPLE USAGE IN PROMPT
+------------------------------------------------------------
+Given the scene description and character states,
+the model must select a camera template that satisfies the constraints:
+
+Example:
+Scene: Robert walks nervously across the room while Eleanor watches.
+States: Robert = walking, Eleanor = static.
+Goal: Show tension and shifting dominance.
+
+→ Valid choices: ["truck_between","push_in_to_A","crosscut","crane"]
+→ Invalid choices: ["two_static","singlestatic","roll"]
+
+Return the selected template as one JSON object according to
+the previously defined formats.
+
+
+CINEMATOGRAPHER_A PLAN:
+{
+  "scene_id": "scene_01",
+  "clips": [
+    {
+      "clip_id": "clip_01",
+      "shots": [
+        {
+          "type": "two_static",
+          "subjects": [
+            "Clara",
+            "Maya"
+          ],
+          "relation": "distant",
+          "framing": "two_shot",
+          "shot_size": "MS",
+          "angle": "Eye",
+          "rationale": "Static composition captures the strained maternal greeting; Clara and Maya face each other across the coffee table, visually framing their emotional distance while Elias remains seated in background context."
+        }
+      ],
+      "rationale": "All characters are static per STATE MATRIX; a two_static shot between Clara and Maya (the active participants) respects SECTION V constraints and emphasizes their uneasy reunion. Elias is compositionally present but not dominant, matching his passive role in this line."
+    },
+    {
+      "clip_id": "clip_02",
+      "shots": [
+        {
+          "type": "singlestatic",
+          "subject": "Maya",
+          "position": "Head",
+          "direction": "front",
+          "angle": "Eye",
+          "shot_size": "CU",
+          "rationale": "Close-up on Maya’s guarded response reveals her emotional distance and suspicion; static framing aligns with her unmoving state and sharpens focus on subtext."
+        }
+      ],
+      "rationale": "Maya is static and delivers a loaded line—CU via singlestatic isolates her reaction while complying with SECTION V. This shift from the prior two-shot maintains continuity and deepens psychological tension."
+    },
+    {
+      "clip_id": "clip_03",
+      "shots": [
+        {
+          "type": "singlestatic",
+          "subject": "Elias",
+          "position": "Head",
+          "direction": "front",
+          "angle": "Eye",
+          "shot_size": "CU",
+          "rationale": "Elias speaks for the first time; CU on his wistful expression ties his line to the photo album and past, while static framing respects his seated, unmoving state."
+        }
+      ],
+      "rationale": "Elias is static and now the speaker; singlestatic CU is appropriate per SECTION V. This shot redirects audience attention to him, motivated by Clara and Maya turning to face him per blocking."
+    },
+    {
+      "clip_id": "clip_04",
+      "shots": [
+        {
+          "type": "two_static",
+          "subjects": [
+            "Clara",
+            "Maya"
+          ],
+          "relation": "conflict",
+          "framing": "two_shot",
+          "shot_size": "MS",
+          "angle": "Eye",
+          "rationale": "Clara delivers the first explicit hint of trouble; framing her with Maya (who reacts) in a medium two-shot underscores the emerging conflict while maintaining spatial continuity."
+        }
+      ],
+      "rationale": "Both Clara and Maya are static and directly engaged; two_static is permitted under SECTION V. The 'conflict' relation reflects the dialogue’s subtextual rupture, and the composition mirrors their facing directions per blocking."
+    },
+    {
+      "clip_id": "clip_05",
+      "shots": [
+        {
+          "type": "singlestatic",
+          "subject": "Elias",
+          "position": "Head",
+          "direction": "front",
+          "angle": "Eye",
+          "shot_size": "CU",
+          "rationale": "Elias’s grave follow-up demands focus; CU isolates his announcement and contrasts with Clara’s earlier line, deepening narrative unease."
+        }
+      ],
+      "rationale": "Elias is static and speaking; singlestatic CU adheres to SECTION V and is motivated by both women turning to him. This maintains shot/reverse-shot logic while emphasizing the weight of his words."
+    },
+    {
+      "clip_id": "clip_06",
+      "shots": [
+        {
+          "type": "singlestatic",
+          "subject": "Maya",
+          "position": "Head",
+          "direction": "front",
+          "angle": "Eye",
+          "shot_size": "CU",
+          "rationale": "Maya’s metaphorical line crystallizes her suspicion; CU captures her dawning realization and emotional isolation as the outsider."
+        }
+      ],
+      "rationale": "Maya is static and delivers the clip’s emotional climax; singlestatic CU is optimal per SECTION V. The shot aligns with her facing Clara at line end, preserving continuity while highlighting her vulnerability."
+    }
+  ]
+}
+
+CINEMATOGRAPHER_B PLAN:
+{
+  "scene_id": "scene_01",
+  "clips": [
+    {
+      "clip_id": "clip_01",
+      "shots": [
+        {
+          "type": "two_static",
+          "subjects": [
+            "Clara",
+            "Maya"
+          ],
+          "relation": "distant",
+          "framing": "two_shot",
+          "shot_size": "MS",
+          "angle": "Eye",
+          "rationale": "Static composition captures the strained reunion between Clara and Maya; Elias remains seated and out of frame to emphasize the initial dyadic interaction. Both are static, satisfying SECTION V constraints."
+        }
+      ],
+      "rationale": "Clara speaks to Maya while both remain static; a two_static shot frames their uneasy connection without stylistic excess. Elias is seated and not engaged in the exchange, so excluding him maintains focus and continuity."
+    },
+    {
+      "clip_id": "clip_02",
+      "shots": [
+        {
+          "type": "singlestatic",
+          "subject": "Maya",
+          "position": "Head",
+          "direction": "front",
+          "angle": "Eye",
+          "shot_size": "CU",
+          "rationale": "Maya’s blunt observation reveals emotional distance; a close-up on her static face underscores her guarded skepticism while maintaining visual continuity from the prior two-shot."
+        }
+      ],
+      "rationale": "Maya is static and delivers a loaded line—her CU isolates her emotional response. Clara and Elias remain still but are momentarily de-emphasized to highlight Maya’s perspective shift."
+    },
+    {
+      "clip_id": "clip_03",
+      "shots": [
+        {
+          "type": "two_static",
+          "subjects": [
+            "Elias",
+            "Maya"
+          ],
+          "relation": "distant",
+          "framing": "OTS_pair",
+          "shot_size": "MS",
+          "angle": "Eye",
+          "rationale": "Elias interjects from his seated position; an over-the-shoulder two-shot includes Maya listening, visually linking past (Elias with album) and present suspicion. Both are static, satisfying constraints."
+        }
+      ],
+      "rationale": "Elias speaks while seated; Maya turns to him, motivating a reframe to include both. The OTS pairing maintains spatial logic (Elias at S1, Maya at T4) and emphasizes the shift in attention without camera movement."
+    },
+    {
+      "clip_id": "clip_04",
+      "shots": [
+        {
+          "type": "two_static",
+          "subjects": [
+            "Clara",
+            "Maya"
+          ],
+          "relation": "conflict",
+          "framing": "split_depth",
+          "shot_size": "MLS",
+          "angle": "Eye",
+          "rationale": "Clara’s nervous admission about the house creates tension; split-depth framing places Clara slightly closer (foreground) and Maya reacting in mid-ground, visually encoding imbalance while both remain static."
+        }
+      ],
+      "rationale": "Clara addresses Maya directly after turning to her; the static split-depth composition reflects emotional asymmetry. Elias remains seated and passive, so excluding him keeps focus on the pivotal disclosure."
+    },
+    {
+      "clip_id": "clip_05",
+      "shots": [
+        {
+          "type": "singlestatic",
+          "subject": "Elias",
+          "position": "Head",
+          "direction": "front",
+          "angle": "Eye",
+          "shot_size": "CU",
+          "rationale": "Elias delivers a cryptic, weighty line from his seated position; a static CU isolates his solemn expression, reinforcing the gravity of his 'something else' and contrasting with earlier wider frames."
+        }
+      ],
+      "rationale": "Elias is static and now the emotional focal point; his CU signals deepening stakes. The shot avoids movement per SECTION V and maintains continuity by holding on him as both women turn to listen."
+    },
+    {
+      "clip_id": "clip_06",
+      "shots": [
+        {
+          "type": "full_shot",
+          "rationale": "Maya’s metaphorical line encapsulates the scene’s tension; a full shot re-establishes the unstable triangle—Clara standing at T2, Elias seated at S1, Maya at T4—visually confirming her feeling of being out of sync with the hidden agenda."
+        }
+      ],
+      "rationale": "All three characters are static but emotionally charged; the full_shot satisfies SECTION V group constraints by revealing spatial and relational dynamics at the climax of the exchange, reinforcing isolation and foreshadowing conflict."
+    }
+  ]
+}
+
+A's REVIEW OF B:
+{
+  "reviewer": "Cinematographer_A",
+  "target_plan_author": "Cinematographer_B",
+  "agreements": [
+    "clip_01: two_static on Clara/Maya is valid—both static, relation 'distant' matches emotional tone.",
+    "clip_03: two_static (OTS_pair) on Elias/Maya adheres to constraints; both static, framing motivated by attention shift.",
+    "clip_05: singlestatic CU on Elias is appropriate—subject static, shot isolates gravitas without violating SECTION V.",
+    "clip_06: full_shot correctly applied for three static characters; satisfies group constraint and reinforces spatial tension."
+  ],
+  "disagreements": [
+    "clip_02: singlestatic CU on Maya is technically compliant but suboptimal—misses opportunity to reflect her reorientation from Clara to Elias as per blocking geometry.",
+    "clip_04: two_static with split_depth on Clara/Maya ignores that Maya’s end_face_to is Clara while Clara’s end_face_to is Maya—valid—but the shot excludes Elias despite his passive presence at S1, which weakens spatial continuity before clip_05’s tight CU on him."
+  ],
+  "suggestions": [
+    {
+      "clip_id": "clip_02",
+      "shot_index": 0,
+      "change": "Replace singlestatic with crosscut between Maya (CU) and Clara (MCU)",
+      "reason": "STATE MATRIX shows all characters static, making crosscut permissible under SECTION V two-person constraints. Blocking indicates Maya faces Clara, but her line carries judgment—crosscut would contrast their static poses while preserving emotional asymmetry better than isolated CU."
+    },
+    {
+      "clip_id": "clip_04",
+      "shot_index": 0,
+      "change": "Replace two_static with full_shot (MLS)",
+      "reason": "All three characters are static; SECTION V group constraint permits full_shot even in dyadic dialogue when third character is visually relevant. Elias remains seated with photo album—a key motif—and excluding him breaks spatial continuity right before his pivotal line in clip_05. Full_shot maintains triangle composition while still foregrounding Clara’s admission."
+    }
+  ],
+  "summary": "Plan largely adheres to SECTION V constraints but misses two opportunities to strengthen spatial storytelling. Clip_02’s isolated CU sacrifices relational contrast; clip_04’s exclusion of Elias disrupts ensemble continuity. Minimal adjustments using permitted templates (crosscut, full_shot) would better serve blocking geometry and foreshadowing goals."
+}
+
+B's REVIEW OF A:
+{
+  "reviewer": "Cinematographer_B",
+  "target_plan_author": "Cinematographer_A",
+  "agreements": [
+    "clip_01: two_static between Clara and Maya is valid—both static, relation 'distant' matches subtext, and framing respects blocking geometry.",
+    "clip_03: singlestatic CU on Elias is appropriate—static state, speaker role, and emotional motivation align with SECTION V.",
+    "clip_05: singlestatic CU on Elias correctly isolates his announcement while adhering to static state constraints.",
+    "clip_06: singlestatic CU on Maya effectively captures her realization and complies with static state and shot continuity."
+  ],
+  "disagreements": [
+    "clip_02: singlestatic CU on Maya is technically compliant but misses opportunity to reflect her shifting attention per blocking (she turns from Clara to Elias during clip_03 setup); current shot implies fixed frontality inconsistent with end_face_to in clip_02.",
+    "clip_04: two_static framing Clara and Maya ignores that Maya’s end_face_to is Clara, but Clara’s end_face_to is Maya—yet Elias has just spoken and remains central to the emerging tension; excluding him visually weakens foreshadowing."
+  ],
+  "suggestions": [
+    {
+      "clip_id": "clip_02",
+      "shot_index": 0,
+      "change": "Replace singlestatic with singlestatic but adjust direction to 'front-right' (azimuth ≈ +30°) to match Maya’s end orientation toward Elias per blocking in clip_02 (end_face_to: 'Clara' is incorrect—blocking shows end_face_to: 'Clara' in clip_02, but clip_03 shows immediate shift; however, clip_02 end_face_to is indeed 'Clara', so direction should remain front. Re-evaluate: no violation. Withdraw suggestion.",
+      "reason": "Upon rechecking blocking: clip_02 Maya end_face_to = 'Clara', so front-facing CU is geometrically valid. No violation."
+    },
+    {
+      "clip_id": "clip_04",
+      "shot_index": 0,
+      "change": "Replace two_static (Clara/Maya) with full_shot including all three characters",
+      "reason": "All characters are static, but the dialogue introduces house-related stakes implicating Elias (who remains seated but is psychologically central). SECTION V GROUP constraint: 'If multiple characters (≥3): Always prefer full_shot' applies when ensemble dynamics are narratively active—even if one is non-speaking. The parents’ joint revelation creates a triadic tension that two_static omits, violating spatial truth and foreshadowing intent."
+    }
+  ],
+  "summary": "Plan largely adheres to SECTION V constraints with valid static-state choices. Primary issue: clip_04’s two_static excludes Elias during a pivotal joint parental disclosure, weakening spatial and emotional triangulation. Replace with full_shot to honor ensemble context per GROUP constraints and script’s foreshadowing goal."
+}
+
+Your response should only contain the following JSON content:
+{
+  "scene_id": "scene_01",
+  "clips": [
+    {
+      "clip_id": "clip_01",
+      "shots": [
+        { /* one JSON picked from the templates above (SECTION I/II/III) */ }
+      ],
+      "rationale": "Why these shots fit this clip (coherent, motivated, respects blocking, templates, and SECTION V constraints)."
+    }
+  ]
+}

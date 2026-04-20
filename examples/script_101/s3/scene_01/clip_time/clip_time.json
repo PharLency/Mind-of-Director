@@ -1,0 +1,55 @@
+{
+  "scene_id": "scene_01",
+  "unit": "seconds",
+  "total_timeline": 22.431020379066467,
+  "clips": [
+    {
+      "clip_id": "clip_01",
+      "speaker": "Clara",
+      "start": 0.0,
+      "audio_seconds": 2.7951021194458008,
+      "duration_seconds": 3.7951021194458008,
+      "end": 3.7951021194458008
+    },
+    {
+      "clip_id": "clip_02",
+      "speaker": "Maya",
+      "start": 3.7951021194458008,
+      "audio_seconds": 2.8473470211029053,
+      "duration_seconds": 3.8473470211029053,
+      "end": 7.6424491405487061
+    },
+    {
+      "clip_id": "clip_03",
+      "speaker": "Elias",
+      "start": 7.6424491405487061,
+      "audio_seconds": 1.5673469305038452,
+      "duration_seconds": 2.5673469305038452,
+      "end": 10.209796071052551
+    },
+    {
+      "clip_id": "clip_04",
+      "speaker": "Clara",
+      "start": 10.209796071052551,
+      "audio_seconds": 2.9257142543792725,
+      "duration_seconds": 3.9257142543792725,
+      "end": 14.135510325431824
+    },
+    {
+      "clip_id": "clip_05",
+      "speaker": "Elias",
+      "start": 14.135510325431824,
+      "audio_seconds": 2.5077550411224365,
+      "duration_seconds": 3.5077550411224365,
+      "end": 17.64326536655426
+    },
+    {
+      "clip_id": "clip_06",
+      "speaker": "Maya",
+      "start": 17.64326536655426,
+      "audio_seconds": 3.787755012512207,
+      "duration_seconds": 4.787755012512207,
+      "end": 22.431020379066467
+    }
+  ]
+}

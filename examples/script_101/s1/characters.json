@@ -1,0 +1,26 @@
+[
+  {
+    "name": "Elias",
+    "age": "62",
+    "gender": "male",
+    "occupation": "Retired high school literature teacher",
+    "personality traits": "Calm, introspective, burdened by guilt, emotionally reserved, deeply remorseful",
+    "speaking style": "Measured and soft-spoken, with long pauses; chooses words carefully, often trailing off when overwhelmed"
+  },
+  {
+    "name": "Clara",
+    "age": "59",
+    "gender": "female",
+    "occupation": "Former librarian, now part-time florist",
+    "personality traits": "Gentle, nurturing on the surface, harbors deep-seated pain, resilient yet fragile, observant",
+    "speaking style": "Warm and polite with a slight tremor when stressed; uses euphemisms to avoid confrontation until she snaps"
+  },
+  {
+    "name": "Maya",
+    "age": "31",
+    "gender": "female",
+    "occupation": "Data analyst at a tech startup",
+    "personality traits": "Independent, sharp-witted, emotionally guarded, perceptive, secretly yearning for connection",
+    "speaking style": "Direct and concise, often laced with dry sarcasm; voice tightens when hurt or suspicious"
+  }
+]

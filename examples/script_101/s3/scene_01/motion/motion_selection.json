@@ -1,0 +1,194 @@
+[
+  {
+    "clip_id": "clip_01",
+    "actions": [
+      {
+        "character": "Clara",
+        "state": "standing",
+        "action": {
+          "id": 17,
+          "name": "Talking"
+        },
+        "reasoning": "Delivering a concerned greeting with strained warmth."
+      },
+      {
+        "character": "Elias",
+        "state": "sitting",
+        "action": {
+          "id": 29,
+          "name": "Sitting Idle"
+        },
+        "reasoning": "Quietly observing, absorbed in the photo album."
+      },
+      {
+        "character": "Maya",
+        "state": "standing",
+        "action": {
+          "id": 15,
+          "name": "Standing Idle"
+        },
+        "reasoning": "Neutral stance, freshly arrived and assessing the room."
+      }
+    ]
+  },
+  {
+    "clip_id": "clip_02",
+    "actions": [
+      {
+        "character": "Clara",
+        "state": "standing",
+        "action": {
+          "id": 20,
+          "name": "Thoughtful Head Shake"
+        },
+        "reasoning": "Reacting to Maya’s blunt observation with quiet discomfort."
+      },
+      {
+        "character": "Elias",
+        "state": "sitting",
+        "action": {
+          "id": 29,
+          "name": "Sitting Idle"
+        },
+        "reasoning": "Still withdrawn, not yet engaging directly."
+      },
+      {
+        "character": "Maya",
+        "state": "standing",
+        "action": {
+          "id": 17,
+          "name": "Talking"
+        },
+        "reasoning": "Speaking with subtle tension beneath casual words."
+      }
+    ]
+  },
+  {
+    "clip_id": "clip_03",
+    "actions": [
+      {
+        "character": "Clara",
+        "state": "standing",
+        "action": {
+          "id": 1,
+          "name": "Agreeing"
+        },
+        "reasoning": "Nodding softly in shared nostalgia as she turns to Elias."
+      },
+      {
+        "character": "Elias",
+        "state": "sitting",
+        "action": {
+          "id": 31,
+          "name": "Sitting Talking"
+        },
+        "reasoning": "Finally speaking, voice tinged with wistfulness."
+      },
+      {
+        "character": "Maya",
+        "state": "standing",
+        "action": {
+          "id": 19,
+          "name": "Thinking"
+        },
+        "reasoning": "Noticing the shift in dynamic, beginning to suspect more."
+      }
+    ]
+  },
+  {
+    "clip_id": "clip_04",
+    "actions": [
+      {
+        "character": "Clara",
+        "state": "standing",
+        "action": {
+          "id": 17,
+          "name": "Talking"
+        },
+        "reasoning": "Forcing calm while delivering the first hint of crisis."
+      },
+      {
+        "character": "Elias",
+        "state": "sitting",
+        "action": {
+          "id": 27,
+          "name": "Sitting Disapproval"
+        },
+        "reasoning": "Arms slightly crossed, uneasy about Clara broaching the topic."
+      },
+      {
+        "character": "Maya",
+        "state": "standing",
+        "action": {
+          "id": 16,
+          "name": "Surprised"
+        },
+        "reasoning": "Eyes widen slightly—this wasn’t expected at a celebration."
+      }
+    ]
+  },
+  {
+    "clip_id": "clip_05",
+    "actions": [
+      {
+        "character": "Clara",
+        "state": "standing",
+        "action": {
+          "id": 12,
+          "name": "Sad Idle"
+        },
+        "reasoning": "Looking down briefly, bracing for Elias’s heavier revelation."
+      },
+      {
+        "character": "Elias",
+        "state": "sitting",
+        "action": {
+          "id": 31,
+          "name": "Sitting Talking"
+        },
+        "reasoning": "Leaning forward slightly, voice low and serious."
+      },
+      {
+        "character": "Maya",
+        "state": "standing",
+        "action": {
+          "id": 19,
+          "name": "Thinking"
+        },
+        "reasoning": "Eyes narrow—now certain something is deeply wrong."
+      }
+    ]
+  },
+  {
+    "clip_id": "clip_06",
+    "actions": [
+      {
+        "character": "Clara",
+        "state": "standing",
+        "action": {
+          "id": 6,
+          "name": "Defeated"
+        },
+        "reasoning": "Shoulders slump; she knows the storm is unavoidable."
+      },
+      {
+        "character": "Elias",
+        "state": "sitting",
+        "action": {
+          "id": 28,
+          "name": "Sitting Disbelief"
+        },
+        "reasoning": "Stares blankly—shocked Maya articulated the tension so sharply."
+      },
+      {
+        "character": "Maya",
+        "state": "standing",
+        "action": {
+          "id": 17,
+          "name": "Talking"
+        },
+        "reasoning": "Delivering her metaphor with wary, guarded irony."
+      }
+    ]
+  }
+]

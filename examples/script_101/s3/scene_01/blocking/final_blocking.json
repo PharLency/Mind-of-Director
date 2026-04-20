@@ -1,0 +1,228 @@
+{
+  "scene_id": "scene_01",
+  "clips": [
+    {
+      "clip_id": "clip_01",
+      "speaker": "Clara",
+      "content": "You look tired, sweetheart. Long drive?",
+      "characters": [
+        {
+          "name": "Clara",
+          "start_point": "T2",
+          "start_state": "standing",
+          "start_face_to": "Maya",
+          "end_point": "T2",
+          "end_state": "standing",
+          "end_face_to": "Maya",
+          "position_change": false
+        },
+        {
+          "name": "Elias",
+          "start_point": "S1",
+          "start_state": "sitting",
+          "start_face_to": null,
+          "end_point": "S1",
+          "end_state": "sitting",
+          "end_face_to": null,
+          "position_change": false
+        },
+        {
+          "name": "Maya",
+          "start_point": "T4",
+          "start_state": "standing",
+          "start_face_to": "Clara",
+          "end_point": "T4",
+          "end_state": "standing",
+          "end_face_to": "Clara",
+          "position_change": false
+        }
+      ]
+    },
+    {
+      "clip_id": "clip_02",
+      "speaker": "Maya",
+      "content": "Traffic was fine. You both look... older.",
+      "characters": [
+        {
+          "name": "Clara",
+          "start_point": "T2",
+          "start_state": "standing",
+          "start_face_to": "Maya",
+          "end_point": "T2",
+          "end_state": "standing",
+          "end_face_to": "Maya",
+          "position_change": false
+        },
+        {
+          "name": "Elias",
+          "start_point": "S1",
+          "start_state": "sitting",
+          "start_face_to": null,
+          "end_point": "S1",
+          "end_state": "sitting",
+          "end_face_to": null,
+          "position_change": false
+        },
+        {
+          "name": "Maya",
+          "start_point": "T4",
+          "start_state": "standing",
+          "start_face_to": "Clara",
+          "end_point": "T4",
+          "end_state": "standing",
+          "end_face_to": "Clara",
+          "position_change": false
+        }
+      ]
+    },
+    {
+      "clip_id": "clip_03",
+      "speaker": "Elias",
+      "content": "Thirty years. Hard to believe.",
+      "characters": [
+        {
+          "name": "Clara",
+          "start_point": "T2",
+          "start_state": "standing",
+          "start_face_to": "Maya",
+          "end_point": "T2",
+          "end_state": "standing",
+          "end_face_to": "Elias",
+          "position_change": false
+        },
+        {
+          "name": "Elias",
+          "start_point": "S1",
+          "start_state": "sitting",
+          "start_face_to": null,
+          "end_point": "S1",
+          "end_state": "sitting",
+          "end_face_to": null,
+          "position_change": false
+        },
+        {
+          "name": "Maya",
+          "start_point": "T4",
+          "start_state": "standing",
+          "start_face_to": "Clara",
+          "end_point": "T4",
+          "end_state": "standing",
+          "end_face_to": "Elias",
+          "position_change": false
+        }
+      ]
+    },
+    {
+      "clip_id": "clip_04",
+      "speaker": "Clara",
+      "content": "We should talk about the house tonight. After dinner.",
+      "characters": [
+        {
+          "name": "Clara",
+          "start_point": "T2",
+          "start_state": "standing",
+          "start_face_to": "Elias",
+          "end_point": "T2",
+          "end_state": "standing",
+          "end_face_to": "Maya",
+          "position_change": false
+        },
+        {
+          "name": "Elias",
+          "start_point": "S1",
+          "start_state": "sitting",
+          "start_face_to": null,
+          "end_point": "S1",
+          "end_state": "sitting",
+          "end_face_to": null,
+          "position_change": false
+        },
+        {
+          "name": "Maya",
+          "start_point": "T4",
+          "start_state": "standing",
+          "start_face_to": "Elias",
+          "end_point": "T4",
+          "end_state": "standing",
+          "end_face_to": "Clara",
+          "position_change": false
+        }
+      ]
+    },
+    {
+      "clip_id": "clip_05",
+      "speaker": "Elias",
+      "content": "There’s something else too. Something I need to tell you.",
+      "characters": [
+        {
+          "name": "Clara",
+          "start_point": "T2",
+          "start_state": "standing",
+          "start_face_to": "Maya",
+          "end_point": "T2",
+          "end_state": "standing",
+          "end_face_to": "Elias",
+          "position_change": false
+        },
+        {
+          "name": "Elias",
+          "start_point": "S1",
+          "start_state": "sitting",
+          "start_face_to": null,
+          "end_point": "S1",
+          "end_state": "sitting",
+          "end_face_to": null,
+          "position_change": false
+        },
+        {
+          "name": "Maya",
+          "start_point": "T4",
+          "start_state": "standing",
+          "start_face_to": "Clara",
+          "end_point": "T4",
+          "end_state": "standing",
+          "end_face_to": "Elias",
+          "position_change": false
+        }
+      ]
+    },
+    {
+      "clip_id": "clip_06",
+      "speaker": "Maya",
+      "content": "Why do I feel like I walked into a storm wearing sunglasses?",
+      "characters": [
+        {
+          "name": "Clara",
+          "start_point": "T2",
+          "start_state": "standing",
+          "start_face_to": "Elias",
+          "end_point": "T2",
+          "end_state": "standing",
+          "end_face_to": "Maya",
+          "position_change": false
+        },
+        {
+          "name": "Elias",
+          "start_point": "S1",
+          "start_state": "sitting",
+          "start_face_to": null,
+          "end_point": "S1",
+          "end_state": "sitting",
+          "end_face_to": null,
+          "position_change": false
+        },
+        {
+          "name": "Maya",
+          "start_point": "T4",
+          "start_state": "standing",
+          "start_face_to": "Elias",
+          "end_point": "T4",
+          "end_state": "standing",
+          "end_face_to": "Clara",
+          "position_change": false
+        }
+      ]
+    }
+  ],
+  "design_rationale": "The staging establishes an unstable triangle: Maya stands at T4 (right side of coffee table 10), Clara at T2 (left side), and Elias seated at S1 (on white sofa 00, facing the table). This composition visually isolates Maya while positioning the parents on opposite sides of the central coffee table, reinforcing emotional distance and tension. Clara begins facing Maya to perform maternal concern, consistent with her line. Elias remains seated near the deco photo album 00 (on desk 12), subtly linking him to the past. Maya faces Clara initially, then shifts attention to Elias as the conversation deepens—motivated by his interjection and the growing unease. All facing changes are driven by speaker shifts and emotional beats: when Elias speaks, both women turn to him; when Clara speaks again, Maya reorients to her. No character moves position because no dialogue or emotional cue demands physical relocation—Clara is already 'busying herself' near T2 (close to wine glass 37 and coffee table 10), Elias is settled with the photo album, and Maya remains standing as the newcomer. Seat points enforce null face_to per constraints. All points are interior, avoiding edges, and exclusivity is maintained—no two characters share a point. Continuity is preserved across clips: each character’s start values match the prior end values. No unnecessary movement is introduced."
+}

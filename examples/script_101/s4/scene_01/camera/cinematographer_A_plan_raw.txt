@@ -1,0 +1,101 @@
+{
+  "scene_id": "scene_01",
+  "clips": [
+    {
+      "clip_id": "clip_01",
+      "shots": [
+        {
+          "type": "two_static",
+          "subjects": [
+            "Clara",
+            "Maya"
+          ],
+          "relation": "distant",
+          "framing": "two_shot",
+          "shot_size": "MS",
+          "angle": "Eye",
+          "rationale": "Static composition captures the strained maternal greeting; Clara and Maya face each other across the coffee table, visually framing their emotional distance while Elias remains seated in background context."
+        }
+      ],
+      "rationale": "All characters are static per STATE MATRIX; a two_static shot between Clara and Maya (the active participants) respects SECTION V constraints and emphasizes their uneasy reunion. Elias is compositionally present but not dominant, matching his passive role in this line."
+    },
+    {
+      "clip_id": "clip_02",
+      "shots": [
+        {
+          "type": "singlestatic",
+          "subject": "Maya",
+          "position": "Head",
+          "direction": "front",
+          "angle": "Eye",
+          "shot_size": "CU",
+          "rationale": "Close-up on Maya’s guarded response reveals her emotional distance and suspicion; static framing aligns with her unmoving state and sharpens focus on subtext."
+        }
+      ],
+      "rationale": "Maya is static and delivers a loaded line—CU via singlestatic isolates her reaction while complying with SECTION V. This shift from the prior two-shot maintains continuity and deepens psychological tension."
+    },
+    {
+      "clip_id": "clip_03",
+      "shots": [
+        {
+          "type": "singlestatic",
+          "subject": "Elias",
+          "position": "Head",
+          "direction": "front",
+          "angle": "Eye",
+          "shot_size": "CU",
+          "rationale": "Elias speaks for the first time; CU on his wistful expression ties his line to the photo album and past, while static framing respects his seated, unmoving state."
+        }
+      ],
+      "rationale": "Elias is static and now the speaker; singlestatic CU is appropriate per SECTION V. This shot redirects audience attention to him, motivated by Clara and Maya turning to face him per blocking."
+    },
+    {
+      "clip_id": "clip_04",
+      "shots": [
+        {
+          "type": "two_static",
+          "subjects": [
+            "Clara",
+            "Maya"
+          ],
+          "relation": "conflict",
+          "framing": "two_shot",
+          "shot_size": "MS",
+          "angle": "Eye",
+          "rationale": "Clara delivers the first explicit hint of trouble; framing her with Maya (who reacts) in a medium two-shot underscores the emerging conflict while maintaining spatial continuity."
+        }
+      ],
+      "rationale": "Both Clara and Maya are static and directly engaged; two_static is permitted under SECTION V. The 'conflict' relation reflects the dialogue’s subtextual rupture, and the composition mirrors their facing directions per blocking."
+    },
+    {
+      "clip_id": "clip_05",
+      "shots": [
+        {
+          "type": "singlestatic",
+          "subject": "Elias",
+          "position": "Head",
+          "direction": "front",
+          "angle": "Eye",
+          "shot_size": "CU",
+          "rationale": "Elias’s grave follow-up demands focus; CU isolates his announcement and contrasts with Clara’s earlier line, deepening narrative unease."
+        }
+      ],
+      "rationale": "Elias is static and speaking; singlestatic CU adheres to SECTION V and is motivated by both women turning to him. This maintains shot/reverse-shot logic while emphasizing the weight of his words."
+    },
+    {
+      "clip_id": "clip_06",
+      "shots": [
+        {
+          "type": "singlestatic",
+          "subject": "Maya",
+          "position": "Head",
+          "direction": "front",
+          "angle": "Eye",
+          "shot_size": "CU",
+          "rationale": "Maya’s metaphorical line crystallizes her suspicion; CU captures her dawning realization and emotional isolation as the outsider."
+        }
+      ],
+      "rationale": "Maya is static and delivers the clip’s emotional climax; singlestatic CU is optimal per SECTION V. The shot aligns with her facing Clara at line end, preserving continuity while highlighting her vulnerability."
+    }
+  ]
+}

@@ -1,0 +1,49 @@
+{
+    "standing_actions": [
+      {"id": 1, "name": "Agreeing", "detailed_description": "The character stands upright, nodding their head lightly with a soft smile, conveying agreement and approval through open and friendly body language."},
+      {"id": 2, "name": "Angry", "detailed_description": "The character stands with fists clenched, shoulders tense, and brows furrowed, glaring intensely forward with an aggressive posture."},
+      {"id": 3, "name": "Bored", "detailed_description": "The character stands with slouched shoulders, a vacant stare, occasionally shifting weight from one foot to another, showing clear disinterest."},
+      {"id": 4, "name": "Clapping", "detailed_description": "The character stands and repeatedly brings their palms together in applause, with an enthusiastic smile and upright posture."},
+      {"id": 5, "name": "Crying", "detailed_description": "The character stands with trembling shoulders, covering their face or wiping away tears, body slightly hunched, expressing deep sadness."},
+      {"id": 6, "name": "Defeated", "detailed_description": "The character stands with slumped posture, head lowered, arms hanging loosely by the sides, displaying an aura of exhaustion and resignation."},
+      {"id": 7, "name": "Dismissing Gesture", "detailed_description": "The character stands and waves one hand outward dismissively while turning their head slightly away, signaling disinterest or rejection."},
+      {"id": 8, "name": "Excited", "detailed_description": "The character stands lightly on their toes, bouncing slightly with sparkling eyes and an eager smile, radiating energy and enthusiasm."},
+      {"id": 9, "name": "Happy Idle", "detailed_description": "The character stands relaxed with a gentle sway, arms resting naturally, and a soft, content smile on their face."},
+      {"id": 10, "name": "Joyful Jump", "detailed_description": "The character bends their knees and leaps joyfully into the air, arms raised and a wide grin on their face, full of lively excitement."}, 
+      {"id": 11, "name": "Pointing Forward", "detailed_description": "The character points forward with one hand, with an angry expression."},
+      {"id": 12, "name": "Sad Idle", "detailed_description": "The character stands still with a drooping head, hunched shoulders, and a sorrowful expression, exuding a sense of loneliness."},
+      {"id": 13, "name": "Standing Arguing", "detailed_description": "The character stands firmly, gesturing sharply with their hands, leaning slightly forward with a stern expression as they argue intensely."},
+      {"id": 14, "name": "Standing Greeting", "detailed_description": "The character stands and waves warmly, nods slightly, or gives a small bow, maintaining a friendly and welcoming demeanor."},
+      {"id": 15, "name": "Standing Idle", "detailed_description": "The character stands upright with a neutral posture, arms resting naturally by the sides, showing a calm and passive state."},
+      {"id": 16, "name": "Surprised", "detailed_description": "The character stands with eyes widened, mouth slightly open, and arms instinctively pulled back or raised, expressing shock or astonishment."},
+      {"id": 17, "name": "Talking", "detailed_description": "The character stands and moves their mouth naturally while occasionally gesturing with their hands to emphasize their words."},
+      {"id": 18, "name": "Thankful", "detailed_description": "The character stands with a soft, grateful smile, bowing their head slightly and bringing their hands together as a gesture of appreciation."},
+      {"id": 19, "name": "Thinking", "detailed_description": "The character stands with one hand resting under their chin, eyebrows slightly furrowed, and eyes gazing into the distance, deeply in thought."},
+      {"id": 20, "name": "Thoughtful Head Shake", "detailed_description": "The character stands with a pensive look, gently shaking their head from side to side while frowning slightly, lost in contemplation."},
+      {"id": 21, "name": "Threatening", "detailed_description": "The character stands with a menacing posture, fists clenched and arms slightly raised, glaring intensely at the target, exuding an intimidating presence."}
+    ],
+    "sitting_actions": [
+      {"id": 22, "name": "Banging Fist", "detailed_description": "The character sits upright, banging fist to express anger."},
+      {"id": 23, "name": "Cheering While Sitting", "detailed_description": "The character sits upright, clapping their hands rhythmically with a broad smile, leaning forward slightly in excitement."},
+      {"id": 24, "name": "Sitting Angry", "detailed_description": "The character sits rigidly with clenched fists, a scowl on their face, and tense body posture, radiating anger even while seated."},
+      {"id": 25, "name": "Sitting Clap Fast Speed", "detailed_description": "The character sits and claps their hands together rapidly with bright, enthusiastic energy, celebrating or showing strong approval."},
+      {"id": 26, "name": "Sitting Clapping Middle Speed", "detailed_description": "The character sits and claps their hands at a steady, moderate pace, smiling warmly, showing polite encouragement or support."},
+      {"id": 27, "name": "Sitting Disapproval", "detailed_description": "The character sits with arms crossed and head tilted slightly away, giving a disapproving look or shaking their head lightly."},
+      {"id": 28, "name": "Sitting Disbelief", "detailed_description": "The character sits wide-eyed, mouth slightly agape, and shakes their head slowly, clearly expressing disbelief or shock."},
+      {"id": 29, "name": "Sitting Idle", "detailed_description": "The character sits relaxed with a neutral expression, hands resting calmly on their lap or the armrests, simply waiting or resting."},
+      {"id": 30, "name": "Sitting Laughing", "detailed_description": "The character sits back with their mouth open in hearty laughter, possibly holding their stomach or clapping their hands in amusement."},
+      {"id": 31, "name": "Sitting Talking", "detailed_description": "The character sits comfortably, speaking naturally with occasional hand gestures, maintaining an engaged and conversational demeanor."}
+    ],
+    "walking_actions": [
+      {"id": 32, "name": "Dodging Back", "detailed_description": "The character dodges backward quickly, arms raised defensively."},
+      {"id": 33, "name": "Start Walking Middle Speed", "detailed_description": "The character begins walking at a moderate, natural pace, arms swinging gently and body posture relaxed."},
+      {"id": 34, "name": "Walking Backward With Head Down", "detailed_description": "The character carefully steps backward, head lowered, shoulders slightly hunched, suggesting caution or sadness."},
+      {"id": 35, "name": "Walking Backward", "detailed_description": "The character walks steadily backward, glancing occasionally over their shoulder, maintaining balance and awareness."},
+      {"id": 36, "name": "Walking Fast Speed", "detailed_description": "The character strides forward quickly, with arms swinging with greater force and an energetic, purposeful gait."},
+      {"id": 37, "name": "Walking Middle Speed", "detailed_description": "The character walks at a natural, steady pace, arms swinging slightly, maintaining a casual and comfortable posture."}
+    ],
+    "transition_actions": [
+      {"id": 38, "name": "Stand To Sit", "detailed_description": "The character bends their knees and lowers themselves carefully into a chair, placing hands on the armrests or thighs for balance."},
+      {"id": 39, "name": "Stand Up", "detailed_description": "The character leans forward slightly, pushes off with their hands, and rises smoothly from a seated to a standing position with controlled motion."}
+    ]
+  }

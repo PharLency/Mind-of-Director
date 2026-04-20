@@ -1,0 +1,104 @@
+[
+  {
+    "scene-topic": "Reunion and Revelation",
+    "scene-plot": "Maya returns home after months of estrangement to join her parents for what she believes is a quiet 30th anniversary dinner. The room is warmly lit, but tension hums beneath the surface. Clara busies herself with wine glasses, her smile strained, while Elias sits with a photo album—perhaps from happier times. Their polite greetings quickly give way to Clara’s nervous admission that they must discuss the house’s future, and Elias adds that he has an important announcement after dinner. Maya senses something deeper than financial trouble, and the fragile civility masks unspoken wounds.",
+    "scene-dialogue": [
+      {
+        "speaker": "Clara",
+        "content": "You look tired, sweetheart. Long drive?"
+      },
+      {
+        "speaker": "Maya",
+        "content": "Traffic was fine. You both look... older."
+      },
+      {
+        "speaker": "Elias",
+        "content": "Thirty years. Hard to believe."
+      },
+      {
+        "speaker": "Clara",
+        "content": "We should talk about the house tonight. After dinner."
+      },
+      {
+        "speaker": "Elias",
+        "content": "There’s something else too. Something I need to tell you."
+      },
+      {
+        "speaker": "Maya",
+        "content": "Why do I feel like I walked into a storm wearing sunglasses?"
+      }
+    ]
+  },
+  {
+    "scene-topic": "Breaking the Surface",
+    "scene-plot": "Over a carefully prepared but emotionally charged dinner, the family’s attempts at small talk collapse under the weight of silence and half-truths. Maya presses about the sudden plan to sell the house, and Clara—overwhelmed by years of suppressed pain—finally snaps, declaring the family is falling apart. Elias then confesses his massive debt, leaving Maya stunned. The room grows quiet except for the sound of wine being poured and candles flickering, as each character grapples with betrayal, shame, and loss.",
+    "scene-dialogue": [
+      {
+        "speaker": "Maya",
+        "content": "Why sell the house? You’ve lived here forever."
+      },
+      {
+        "speaker": "Clara",
+        "content": "Forever doesn’t pay the bills, Maya."
+      },
+      {
+        "speaker": "Maya",
+        "content": "Then tell me what’s really going on."
+      },
+      {
+        "speaker": "Clara",
+        "content": "What’s going on? We’re crumbling. All of us."
+      },
+      {
+        "speaker": "Elias",
+        "content": "I’m in debt. Deep. Deeper than you can imagine."
+      },
+      {
+        "speaker": "Maya",
+        "content": "How deep?"
+      },
+      {
+        "speaker": "Elias",
+        "content": "Enough that this house won’t cover it."
+      }
+    ]
+  },
+  {
+    "scene-topic": "Confession and Dawn",
+    "scene-plot": "After Clara retreats upstairs, exhausted by the evening’s emotional toll, Elias and Maya remain alone in the dimming living room. In the quiet, Elias reveals the true source of his debt: secret payments for the medical care of a son from an affair years ago. He admits Clara knew and forgave him, but their marriage became a hollow shell of silence. Maya, initially frozen in shock, processes the betrayal—not just of infidelity, but of exclusion from a hidden chapter of her family’s history. Yet, seeing her father’s genuine remorse, she chooses not to walk away.",
+    "scene-dialogue": [
+      {
+        "speaker": "Elias",
+        "content": "There’s a boy. My son. From a long time ago."
+      },
+      {
+        "speaker": "Maya",
+        "content": "You’re joking."
+      },
+      {
+        "speaker": "Elias",
+        "content": "He’s sick. I’ve been paying for his care. In secret."
+      },
+      {
+        "speaker": "Maya",
+        "content": "And Mom knew?"
+      },
+      {
+        "speaker": "Elias",
+        "content": "She forgave me. But we never spoke of it again."
+      },
+      {
+        "speaker": "Maya",
+        "content": "All these years... I didn’t even know I had a brother."
+      },
+      {
+        "speaker": "Elias",
+        "content": "I’m so sorry, Maya."
+      },
+      {
+        "speaker": "Maya",
+        "content": "Don’t go yet. Let’s just... sit until the light comes."
+      }
+    ]
+  }
+]

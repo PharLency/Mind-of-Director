@@ -1,0 +1,81 @@
+{
+  "scene_id": "scene_01",
+  "total_clips": 6,
+  "clips": [
+    {
+      "clip_id": "clip_01",
+      "speaker": "Clara",
+      "text": "You look tired, sweetheart. Long drive?",
+      "gender": "female",
+      "voice": "longwan_v2",
+      "language": "English",
+      "output": "clip_01_Clara.mp3",
+      "status": "success"
+    },
+    {
+      "clip_id": "clip_02",
+      "speaker": "Maya",
+      "text": "Traffic was fine. You both look... older.",
+      "gender": "female",
+      "voice": "loongabby_v2",
+      "language": "English",
+      "output": "clip_02_Maya.mp3",
+      "status": "success"
+    },
+    {
+      "clip_id": "clip_03",
+      "speaker": "Elias",
+      "text": "Thirty years. Hard to believe.",
+      "gender": "male",
+      "voice": "longshuo_v2",
+      "language": "English",
+      "output": "clip_03_Elias.mp3",
+      "status": "success"
+    },
+    {
+      "clip_id": "clip_04",
+      "speaker": "Clara",
+      "text": "We should talk about the house tonight. After dinner.",
+      "gender": "female",
+      "voice": "longwan_v2",
+      "language": "English",
+      "output": "clip_04_Clara.mp3",
+      "status": "success"
+    },
+    {
+      "clip_id": "clip_05",
+      "speaker": "Elias",
+      "text": "There’s something else too. Something I need to tell you.",
+      "gender": "male",
+      "voice": "longshuo_v2",
+      "language": "English",
+      "output": "clip_05_Elias.mp3",
+      "status": "success"
+    },
+    {
+      "clip_id": "clip_06",
+      "speaker": "Maya",
+      "text": "Why do I feel like I walked into a storm wearing sunglasses?",
+      "gender": "female",
+      "voice": "loongabby_v2",
+      "language": "English",
+      "output": "clip_06_Maya.mp3",
+      "status": "success"
+    }
+  ],
+  "voice_assignments": {
+    "Clara": {
+      "voice": "longwan_v2",
+      "gender": "female"
+    },
+    "Maya": {
+      "voice": "loongabby_v2",
+      "gender": "female"
+    },
+    "Elias": {
+      "voice": "longshuo_v2",
+      "gender": "male"
+    }
+  },
+  "errors": []
+}
