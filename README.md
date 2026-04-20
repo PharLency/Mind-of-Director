@@ -1,6 +1,18 @@
-# Mind of Director
+# Mind-of-Director
 
-Mind of Director is a staged previs pipeline that turns a story idea into structured screenplay data, a Holodeck 3D scene, character blocking/motion/audio cues, and camera segments.
+[arXiv](https://arxiv.org/abs/2603.14790) | [Project Page](https://pharlency.github.io/Mind-of-Director/)
+
+We present **Mind-of-Director**, a multi-modal agent-driven framework for film previz that models the collaborative decision-making process of a film production team.
+
+Given a creative idea, **Mind-of-Director** orchestrates multiple specialized agents to produce film previz sequences.
+
+The framework consists of four cooperative modules: *Script Development*, where agents draft and refine the screenplay iteratively; *Virtual Scene Design*, which transforms text into semantically aligned 3D environments; *Character Behaviour Control*, which determines character blocking and motion; and *Camera Planning*, which optimizes framing, movement, and composition for cinematic camera effects.
+
+## Released Modules
+
+- [x] `prompts`
+- [x] `python pipeline`
+- [ ] `Unity Assets`
 
 ## Project Layout
 
